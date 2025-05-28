@@ -12,7 +12,7 @@
 	knife_x_offset = 20
 	knife_y_offset = 12
 	var/mob/holder
-	var/max_mod_capacity = 100
+	var/max_mod_capacity = 10
 	var/list/modkits = list()
 	gun_flags = NOT_A_REAL_GUN
 	var/disablemodification = FALSE //monkeedit - stops removal and addition of mods
