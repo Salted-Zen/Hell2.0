@@ -38,6 +38,7 @@
 	desc = "A box full of kinetic projectile magazines, specifically for the proto-kinetic SMG.\
 	It is specially designed to only hold proto-kinetic magazines, and also fit inside of explorer webbing."
 	icon_state = "rubbershot_box"
+	illustration = "none"
 
 /obj/item/storage/box/kinetic/Initialize(mapload)
 	. = ..()
@@ -52,10 +53,31 @@
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_box/magazine/pksmgmag(src)
 
+/obj/item/storage/box/kinetic/small
+	name = "case of kinetic projectiles"
+	desc = "A small case with two kinetic projectile magazines, specifically for the proto-kinetic SMG.\
+	Does NOT fit in explorer webbing like the box does."
+	icon_state = "secbox"
+	illustration = "firecracker"
+
+/obj/item/storage/box/kinetic/small/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 2
+	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
+	atom_storage.max_total_storage = 2
+	atom_storage.set_holdable(list(
+		/obj/item/ammo_box/magazine/pksmgmag,
+	))
+
+/obj/item/storage/box/kinetic/PopulateContents()
+	for(var/i in 1 to 2)
+		new /obj/item/ammo_box/magazine/pksmgmag(src)
+
 /obj/item/storage/box/pksmg //A case that the SMG comes in on purchase, containing three magazines
 	name = "PKSMG Case"
 	desc = "A case containing a PKSMG and three magazines. Designed for full auto but has limited ammo."
 	icon_state = "plasticbox"
+	illustration = "writing_syndie"
 
 /obj/item/storage/box/pksmg/Initialize(mapload)
 	. = ..()

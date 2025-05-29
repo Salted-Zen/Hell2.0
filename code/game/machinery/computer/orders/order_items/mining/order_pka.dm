@@ -29,9 +29,9 @@
 	item_path = /obj/item/storage/box/pksmg
 	cost_per_order = 1750
 
-/datum/orderable_item/accelerator/mag //monkestation edit
-	item_path = /obj/item/ammo_box/magazine/pksmgmag
-	cost_per_order = 100
+/datum/orderable_item/accelerator/magbox/small //monkestation edit
+	item_path = /obj/item/storage/box/kinetic/small
+	cost_per_order = 150
 
 /datum/orderable_item/accelerator/magbox //monkestation edit
 	item_path = /obj/item/storage/box/kinetic
