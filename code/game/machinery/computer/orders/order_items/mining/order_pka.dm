@@ -25,6 +25,18 @@
 	item_path = /obj/item/gun/energy/recharge/kinetic_accelerator/railgun
 	cost_per_order = 1250
 
+/datum/orderable_item/accelerator/gun/pksmg //monkestation edit
+	item_path = /obj/item/storage/box/pksmg
+	cost_per_order = 1750
+
+/datum/orderable_item/accelerator/mag //monkestation edit
+	item_path = /obj/item/ammo_box/magazine/pksmgmag
+	cost_per_order = 100
+
+/datum/orderable_item/accelerator/magbox //monkestation edit
+	item_path = /obj/item/storage/box/kinetic
+	cost_per_order = 500
+
 /datum/orderable_item/accelerator/range
 	item_path = /obj/item/borg/upgrade/modkit/range
 	cost_per_order = 1000
