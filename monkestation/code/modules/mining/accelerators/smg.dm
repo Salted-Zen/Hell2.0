@@ -49,11 +49,11 @@
 	atom_storage.set_holdable(list(
 		/obj/item/ammo_box/magazine/pksmgmag,
 	))
-/*
+
 /obj/item/storage/box/kinetic/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_box/magazine/pksmgmag(src)
-*/
+
 /obj/item/storage/box/kinetic/small
 	name = "case of kinetic projectiles"
 	desc = "A small case with two kinetic projectile magazines, specifically for the proto-kinetic SMG.\
@@ -69,11 +69,11 @@
 	atom_storage.set_holdable(list(
 		/obj/item/ammo_box/magazine/pksmgmag,
 	))
-/*
+
 /obj/item/storage/box/kinetic/small/PopulateContents()
 	for(var/i in 1 to 2)
 		new /obj/item/ammo_box/magazine/pksmgmag(src)
-*/
+
 /obj/item/storage/box/pksmg //A case that the SMG comes in on purchase, containing three magazines
 	name = "PKSMG Case"
 	desc = "A case containing a PKSMG and three magazines. Designed for full auto but has limited ammo."
@@ -85,13 +85,13 @@
 	atom_storage.max_slots = 4
 	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
 	atom_storage.max_total_storage = 4
-/*
+
 /obj/item/storage/box/pksmg/PopulateContents()
 		new /obj/item/gun/ballistic/automatic/proto/pksmg(src)
 		new /obj/item/ammo_box/magazine/pksmgmag(src)
 		new /obj/item/ammo_box/magazine/pksmgmag(src)
 		new /obj/item/ammo_box/magazine/pksmgmag(src)
-*/
+
 /obj/item/ammo_casing/energy/kinetic/smg
 	projectile_type = /obj/projectile/kinetic/smg
 	select_name = "kinetic"
