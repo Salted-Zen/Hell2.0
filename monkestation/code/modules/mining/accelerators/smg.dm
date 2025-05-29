@@ -29,6 +29,7 @@
 	icon = 'monkestation/icons/obj/guns/ammo.dmi'
 	icon_state = "pksmgmag"
 	base_icon_state = "pksmgmag"
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	ammo_type = /obj/item/ammo_casing/energy/kinetic/smg
 	caliber = ENERGY
 	max_ammo = 45
@@ -69,7 +70,7 @@
 		/obj/item/ammo_box/magazine/pksmgmag,
 	))
 
-/obj/item/storage/box/kinetic/PopulateContents()
+/obj/item/storage/box/kinetic/small/PopulateContents()
 	for(var/i in 1 to 2)
 		new /obj/item/ammo_box/magazine/pksmgmag(src)
 
