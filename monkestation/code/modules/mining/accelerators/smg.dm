@@ -1,4 +1,4 @@
-/*
+
 /obj/item/gun/ballistic/automatic/proto/pksmg
 	name = "proto-kinetic smg"
 	desc = "Using partial ballistic technology and kinetic acceleration, the Mining Research department has managed to make the kinetic accelerator full auto. \
@@ -106,4 +106,4 @@
 	Skillbasedweapon = FALSE
 
 
-*/
+
