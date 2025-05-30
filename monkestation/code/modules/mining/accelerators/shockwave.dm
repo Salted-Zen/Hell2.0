@@ -19,7 +19,7 @@
 
 /obj/projectile/kinetic/shockwave
 	name = "concussive kinetic force"
-	damage = 50
+	damage = 40
 	range = 0
 
 /obj/item/borg/upgrade/modkit/aoe/turfs/shockwave
