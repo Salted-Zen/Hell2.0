@@ -433,7 +433,7 @@
 		/obj/item/wormhole_jaunter,
 		/obj/item/cargo_teleporter, //monkestation edit
 		/obj/item/storage/box/kinetic, //monkestation edit
-		//obj/item/ammo_box/magazine/pksmgmag, //monkestation edit
+		/obj/item/ammo_box/magazine/pksmgmag, //monkestation edit
 	))
 
 
