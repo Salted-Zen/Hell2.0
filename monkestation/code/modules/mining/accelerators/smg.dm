@@ -1,3 +1,4 @@
+/*
 /obj/item/gun/ballistic/automatic/proto/pksmg
 	name = "proto-kinetic smg"
 	desc = "Using partial ballistic technology and kinetic acceleration, the Mining Research department has managed to make the kinetic accelerator full auto. \
@@ -39,7 +40,7 @@
 	desc = "A box full of kinetic projectile magazines, specifically for the proto-kinetic SMG.\
 	It is specially designed to only hold proto-kinetic magazines, and also fit inside of explorer webbing."
 	icon_state = "rubbershot_box"
-	illustration = "none"
+	illustration = "rubbershot_box"
 
 /obj/item/storage/box/kinetic/Initialize(mapload)
 	. = ..()
@@ -105,3 +106,4 @@
 	Skillbasedweapon = FALSE
 
 
+*/
