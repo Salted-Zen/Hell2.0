@@ -25,7 +25,7 @@
 //Magazine for SMG and the box the mags come in
 /obj/item/ammo_box/magazine/pksmgmag
 	name = "proto-kinetic magazine"
-	desc = "A single magazine loaded with proto-kinetic projectiles, made for the proto-kinetic SMG."
+	desc = ""
 	icon = 'monkestation/icons/obj/guns/ammo.dmi'
 	icon_state = "pksmgmag"
 	base_icon_state = "pksmgmag"
