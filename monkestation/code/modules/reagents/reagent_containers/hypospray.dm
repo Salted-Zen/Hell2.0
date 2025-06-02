@@ -13,7 +13,7 @@
 
 /obj/item/reagent_containers/hypospray/medipen/survival/penthrite
 	name = "Rapid Penthrite Injector"
-	desc = "An expensive single use injector containing penthrite, allowing your body to keep functioning even with wounds that would make someone collapse. Seems to only be rapid in a low pressure enviorment as well... thats misleading."
+	desc = "An expensive single use injector containing penthrite, allowing your body to keep functioning even with wounds that would make someone collapse. Seems to only be rapid in a low pressure enviorment as well... thats misleading. <b> WARNING: DO NOT MIX WITH EPINEPHRINE OR ATROPINE. </b>"
 	icon_state = "atropen"
 	inhand_icon_state = "atropen"
 	base_icon_state = "atropen"

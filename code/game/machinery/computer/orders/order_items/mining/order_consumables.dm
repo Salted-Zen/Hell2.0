@@ -23,7 +23,7 @@
 
 /datum/orderable_item/consumables/penthrite //monkestation edit
 	item_path = /obj/item/reagent_containers/hypospray/medipen/survival/penthrite
-	cost_per_order = 1250
+	cost_per_order = 750
 
 /datum/orderable_item/consumables/medkit_brute
 	item_path = /obj/item/storage/medkit/brute
