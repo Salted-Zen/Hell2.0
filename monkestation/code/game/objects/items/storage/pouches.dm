@@ -1,3 +1,4 @@
+/*
 /obj/item/storage/bag/medipen
 	name = "Medipen Pouch"
 	icon = 'monkestation/icons/obj/storage/pouches.dmi'
@@ -13,3 +14,4 @@
 	atom_storage.set_holdable(list(
 		/obj/item/reagent_containers/hypospray/medipen
 		))
+*/

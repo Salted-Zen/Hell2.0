@@ -29,11 +29,11 @@
 /datum/orderable_item/mining/mining_belt
 	item_path = /obj/item/storage/belt/mining
 	cost_per_order = 500
-
+/*
 /datum/orderable_item/mining/medipenpouch //monkestation edi
 	item_path = /obj/item/storage/bag/medipen
 	cost_per_order = 500
-
+*/
 /datum/orderable_item/mining/point_card
 	item_path = /obj/item/card/mining_point_card
 	cost_per_order = 500
