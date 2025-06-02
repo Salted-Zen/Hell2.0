@@ -9,7 +9,6 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	amount_per_transfer_from_this = 10
 	volume = 30
-	reagent_flags = null
 	list_reagents = list(/datum/reagent/medicine/leporazine = 30)
 
 /obj/item/reagent_containers/hypospray/medipen/survival/penthrite
@@ -22,7 +21,6 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	amount_per_transfer_from_this = 15
 	volume = 15
-	reagent_flags = null
 	list_reagents = list(/datum/reagent/medicine/c2/penthrite = 15)
 
 /obj/item/reagent_containers/hypospray/medipen/survival/speed
@@ -35,7 +33,6 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	amount_per_transfer_from_this = 4
 	volume = 4
-	reagent_flags = null
 	list_reagents = list(/datum/reagent/consumable/monkey_energy = 1, /datum/reagent/medicine/stimulants = 1, /datum/reagent/medicine/ephedrine = 1, /datum/reagent/drug/cocaine = 1)
 
 /obj/item/reagent_containers/hypospray/medipen/magnet
@@ -48,6 +45,5 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	amount_per_transfer_from_this = 30
 	volume = 30
-	reagent_flags = null
 	list_reagents = list(/datum/reagent/consumable/ethanol/fetching_fizz = 30)
 
