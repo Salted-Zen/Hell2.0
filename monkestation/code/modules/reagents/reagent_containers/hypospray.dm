@@ -1,4 +1,4 @@
-/*
+
 /obj/item/reagent_containers/hypospray/medipen/temperature //not a survival subtype, because a low pressure seal on a medipen as harmless as this is pointless
 	name = "Temperature Stabilization Injector"
 	desc = "A three use medipen with the only purpose being to stabilize body temperature. Handy if you plan to be lit on fire or fight a watcher."
@@ -50,4 +50,4 @@
 	volume = 30
 	reagent_flags = null
 	list_reagents = list(/datum/reagent/consumable/ethanol/fetching_fizz = 30)
-*/
+
