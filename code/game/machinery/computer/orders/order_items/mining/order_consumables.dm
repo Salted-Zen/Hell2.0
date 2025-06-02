@@ -9,6 +9,22 @@
 	item_path = /obj/item/reagent_containers/hypospray/medipen/survival/luxury
 	cost_per_order = 1000
 
+/datum/orderable_item/consumables/temperature //monkestation edit
+	item_path = /obj/item/reagent_containers/hypospray/medipen/temperature
+	cost_per_order = 200
+
+/datum/orderable_item/consumables/magnetic //monkestation edit
+	item_path = /obj/item/reagent_containers/hypospray/medipen/magnet
+	cost_per_order = 250
+
+/datum/orderable_item/consumables/speed //monkestation edit
+	item_path = /obj/item/reagent_containers/hypospray/medipen/survival/speed
+	cost_per_order = 550
+
+/datum/orderable_item/consumables/penthrite //monkestation edit
+	item_path = /obj/item/reagent_containers/hypospray/medipen/survival/penthrite
+	cost_per_order = 1250
+
 /datum/orderable_item/consumables/medkit_brute
 	item_path = /obj/item/storage/medkit/brute
 	cost_per_order = 600
