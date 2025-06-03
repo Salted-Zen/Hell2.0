@@ -33,6 +33,7 @@
 /datum/orderable_item/mining/medipenpouch //monkestation edit
 	item_path = /obj/item/storage/bag/medipen
 	cost_per_order = 500
+	GUH GUH GUH
 */
 /datum/orderable_item/mining/point_card
 	item_path = /obj/item/card/mining_point_card
