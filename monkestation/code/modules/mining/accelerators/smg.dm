@@ -103,6 +103,7 @@
 	name = "kinetic projectile"
 	damage = 10
 	range = 5
+	icon_state = "bullet"
 	Skillbasedweapon = FALSE
 
 
