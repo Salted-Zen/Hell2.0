@@ -9,6 +9,14 @@
 	item_path = /obj/item/reagent_containers/hypospray/medipen/survival/luxury
 	cost_per_order = 1000
 
+/datum/orderable_item/consumables/survival_pen/oozling //monkestation edit
+	item_path = /obj/item/reagent_containers/hypospray/medipen/survival/oozling
+	cost_per_order = 500
+
+/datum/orderable_item/consumables/luxury_pen/oozling
+	item_path = /obj/item/reagent_containers/hypospray/medipen/survival/luxury/oozling
+	cost_per_order = 1000
+
 /datum/orderable_item/consumables/temperature //monkestation edit
 	item_path = /obj/item/reagent_containers/hypospray/medipen/temperature
 	cost_per_order = 200
