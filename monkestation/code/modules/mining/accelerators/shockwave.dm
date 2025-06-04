@@ -28,7 +28,7 @@
 	It had to be shipped uninstalled from the actual PK-Shockwave due to technical issues, but installation is simple. \
 	It does not fit into any other PK weapon."
 	maximum_of_type = 1
-	modifier = 1
+	modifier = 0.50
 
 /obj/item/storage/box/shockwave
 	name = "PK-Shockwave Box"
