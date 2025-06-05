@@ -67,9 +67,9 @@
 
 /obj/item/reagent_containers/hypospray/medipen/survival/synthcare
 	name = "Advanced Synthetic Care Pen"
-	desc = "A single use applicator made to rapidly fix urgent damage to synthetic parts on the go in low pressure enviorments. Contains chemicals that are safe but otherwise worthless for organics. <b> WARNING : DO NOT APPLY A SECOND APPLICATOR UNTIL FIRST HAS FULLY PROCESSED. FAILURE TO FOLLOW INSTRUCTIONS IS GURANTEED TO BE LETHAL TO SYNTHETICS. DOES NOT WORK ON CYBORGS. UNDER NO CIRCUMSTANCES IS THIS TO BE MIXED WITH BASIC NANITE SLURRY (FOUND IN THE SMALL SYNTHETIC CARE PEN)</b>"
+	desc = "A single use applicator made to rapidly fix urgent damage to synthetic parts on the go in low pressure enviorments and provide a small speed boost. Contains chemicals that are safe but otherwise worthless for organics. <b> WARNING : DO NOT APPLY A SECOND APPLICATOR UNTIL FIRST HAS FULLY PROCESSED. FAILURE TO FOLLOW INSTRUCTIONS IS GURANTEED TO BE LETHAL TO SYNTHETICS. DOES NOT WORK ON CYBORGS. UNDER NO CIRCUMSTANCES IS THIS TO BE MIXED WITH BASIC NANITE SLURRY (FOUND IN THE SMALL SYNTHETIC CARE PEN)</b>"
 	icon_state = "nanite_hypo"
 	base_icon_state = "nanite_hypo"
-	amount_per_transfer_from_this = 9
-	volume = 9
-	list_reagents = list(/datum/reagent/medicine/nanite_slurry/strong = 9)
+	amount_per_transfer_from_this = 10
+	volume = 10
+	list_reagents = list(/datum/reagent/medicine/nanite_slurry/strong = 9, /datum/reagent/medicine/stimulants = 1)
