@@ -53,7 +53,6 @@
 	desc = "A 12 gauge Shell loaded with magnum kinetic projectiles. Penetrates rocky walls and creatures! <b> Does NOT fit in any standard 12 gauge shotgun! </b>"
 	icon_state = "shellproto"
 	icon = 'icons/obj/weapons/guns/ammo.dmi'
-	worn_icon_state = ""
 	caliber = MINER_SHOTGUN
 	pellets = 5
 	variance = 30
@@ -72,7 +71,6 @@
 	name = "Kinetic Rockbreaker Shell"
 	desc = "A 12 gauge Shell loaded with dozens of special tiny kinetic rockbreaker pellets, perfect for clearing masses of rocks but no good for killing fauna. <b> Does NOT fit in any standard 12 gauge shotgun! </b>"
 	icon_state = "bountyshell"
-	worn_icon_state = ""
 	caliber = MINER_SHOTGUN
 	pellets = 10
 	variance = 120
