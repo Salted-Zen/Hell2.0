@@ -35,17 +35,6 @@
 	volume = 30
 	list_reagents = list(/datum/reagent/consumable/ethanol/fetching_fizz = 30)
 
-/obj/item/reagent_containers/hypospray/medipen/survival/oozling //oozling safe version of the standard survival pen!
-	name = "oozling survival medipen"
-	desc = "A medipen for surviving in the harsh environments made safe for oozlings, heals most common damage sources. WARNING: May cause organ damage. <b> EXTRA WARNING : UNSAFE FOR NON OOZLING LIFE </b>"
-	icon_state = "stimpen"
-	inhand_icon_state = "stimpen"
-	base_icon_state = "stimpen"
-	volume = 35
-	amount_per_transfer_from_this = 35
-	list_reagents = list( /datum/reagent/toxin/plasma = 8, /datum/reagent/medicine/c2/aiuri = 8, /datum/reagent/medicine/c2/libital = 8, /datum/reagent/medicine/leporazine = 6, /datum/reagent/medicine/painkiller/hydromorphone = 5)
-
-
 /obj/item/reagent_containers/hypospray/medipen/survival/luxury/oozling //oozling safe version of the luxury pen!
 	name = "luxury oozling medipen"
 	desc = "Even more cutting edge bluespace technology allowed Nanotrasen to compact 90u of volume into a single medipen. Contains rare and powerful chemicals that are also oozling safe! Used to aid in exploration of very harsh enviroments. WARNING: DO NOT MIX WITH EPINEPHRINE OR ATROPINE. <b> EXTRA WARNING : UNSAFE FOR NON OOZLING LIFE </b>"
