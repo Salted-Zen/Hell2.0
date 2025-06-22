@@ -746,7 +746,7 @@
 	var/list/ret = list()
 	ret |= contents //add our contents
 	for(var/atom/iter_atom as anything in ret.Copy()) //iterate storage objects
-		iter_atom.atom_storage?.return_inv(ret)
+		iter_atom.atom_storage?.return_inv()
 	for(var/obj/item/folder/F in ret.Copy()) //very snowflakey-ly iterate folders
 		ret |= F.contents
 	return ret
@@ -1582,8 +1582,6 @@
 	SEND_SIGNAL(src, COMSIG_LIVING_ON_WABBAJACKED, new_mob)
 	new_mob.name = real_name
 	new_mob.real_name = real_name
-	new_mob.update_name_tag(real_name) // monkestation edit: name tags
-
 	// Transfer mind to the new mob (also handles actions and observers and stuff)
 	if(mind)
 		mind.transfer_to(new_mob)
