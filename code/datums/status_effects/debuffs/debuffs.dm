@@ -371,6 +371,16 @@
 	underlay_state = "bleed"
 	var/bleed_damage = 200
 
+/datum/status_effect/stacking/saw_bleed/sickle //monke addition
+	id = "sickle_bleed"
+	tick_interval = 6
+	delay_before_decay = 30 //these take longer to decay
+	overlay_file = 'icons/effects/bleed.dmi'
+	underlay_file = 'icons/effects/bleed.dmi'
+	overlay_state = "bleed"
+	underlay_state = "bleed"
+	bleed_damage = 125 //weaker than cleaving saw bleed due to being more available
+
 /datum/status_effect/stacking/saw_bleed/fadeout_effect()
 	new /obj/effect/temp_visual/bleed(get_turf(owner))
 
