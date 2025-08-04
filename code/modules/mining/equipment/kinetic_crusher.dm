@@ -1077,7 +1077,7 @@
 	sharpness = SHARP_EDGED
 	charged = TRUE
 	charge_time = 10
-	detonation_damage = 25 //40 on a detonation 60 on a backstab but you get 100 bonus if you whack do three marks
+	detonation_damage = 25 //40 on a detonation 60 on a backstab but you get 125 bonus if you whack do three marks
 	backstab_bonus = 20
 	overrides_main = TRUE
 	overrides_twohandrequired = TRUE
