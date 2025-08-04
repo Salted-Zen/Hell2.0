@@ -511,6 +511,9 @@
 	name = "PKSMG Case"
 	desc = "A case containing a PKSMG and three magazines. Designed for full auto but has limited ammo."
 	icon_state = "miner_case"
+	icon = 'icons/obj/storage/case.dmi'
+	drop_sound = 'sound/items/handling/toolbox_drop.ogg'
+	pickup_sound = 'sound/items/handling/toolbox_pickup.ogg'
 	illustration = ""
 
 /obj/item/storage/box/pksmg/Initialize(mapload)
