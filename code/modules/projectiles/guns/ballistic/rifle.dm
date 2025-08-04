@@ -420,6 +420,7 @@
 	weapon_weight = WEAPON_HEAVY
 	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
 	inhand_icon_state = "fatmac"
+	worn_icon = 'icons/mob/clothing/back.dmi'
 	worn_icon_state = "fatmac"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/minerjdj
 	bolt_wording = "bolt"
