@@ -413,7 +413,7 @@
 	name = ".950 JDJ Kinetic Rifle"
 	desc = "Completely absurd, in both size and firepower. The people down in Mining Research were either overcompensating, \
 	or just having a damn good time, but we found this laying on a table surrounded by about six researchers, \
-	and the Mining Research Director, all passed out on the floor with beers and sodas. Fires and absolutely massive round that \
+	and the Mining Research Director, all passed out on the floor with beers and sodas. Fires an absolutely massive round that \
 	is sure to stop pretty much anything in its tracks that would even warrent it."
 	icon_state = "fatmac"
 	w_class = WEIGHT_CLASS_HUGE
