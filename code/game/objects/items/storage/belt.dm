@@ -453,7 +453,7 @@
 		/obj/item/ammo_casing/govmining,
 		/obj/item/ammo_box/govmining,
 		/obj/item/storage/box/kinetic/govmining,
-		/obj/item/ammo_casing/minerjdj
+		/obj/item/ammo_casing/minerjdj,
 		/obj/item/ammo_box/advanced/s12gauge/hunter, //monkestation edit
 		/obj/item/ammo_casing/shotgun/hunter, //monkestation edit
 	))
