@@ -128,13 +128,57 @@
   Absolucy:
   - qol: You can no longer use the pocket watch to broadcast annoying flashy text
       over the radio.
+  - bugfix: Tried to fix some lag?
+  - rscadd: You can now toggle particle effects from unusuals on/off.
+  - bugfix: Fixed the preferences and character setup menu buttons being greyed out
+      if you logged in after they became ready to use.
+  - bugfix: Fixed being able to cause weird duplicate prefs windows to open if you
+      spam-clicked the prefs button.
+  - bugfix: Fixed splitting as a slimeperson getting you stuck in a randomized human
+      body instead.
+  - bugfix: Fixed oozelings only losing 27 blood instead of 30 when sprayed with water
+      without any sort of protection.
+  - bugfix: (Sealed101) fixed hand tele portals that have been deleted in the process
+      of opening a new portal pair clogging up hand tele's portal pair list. If you
+      try to create portals that would end up like this (i.e. on an active teleporter
+      hub), the hand tele will indicate that.
+  - bugfix: (SmArtKar) Fixed portable atmospheric machines trying to add themselves
+      to SSair queue when destroyed.
+  - code_imp: (timothymtorres) Remove dead code from gas canisters.
+  - bugfix: (Redbert) Fixes issue that causes hypernob reaction to sometimes not work.
+  - bugfix: (Pickle-Coding) Prevents an erroneous temperature share when the air falls
+      below superconduction requirements.
+  - bugfix: (Pickle-Coding) Fixes HFR moderator leaking not leaking properly when
+      a part is cracked.
+  - bugfix: Bingle pits now count an amount of items in a stack, rather than counting
+      a whole stack as a single item.
+  - bugfix: Bingle pits now swallow objects that they expand into instead of just
+      deleting them.
+  - bugfix: bloodsucker oozelings are no longer constantly starving.
   Ice-Type:
   - rscadd: Adds "Jaundice yourself" to the roundstart monkecoin shop, that turns
       you skin yellow.
   - balance: advanced robot limbs no longer have rng damage or knockdown.
+  Killermankey:
+  - rscadd: Adds a pickup truck (/obj/vehicle/ridden/kingschariot)
+  LettuceGuardian:
+  - rscadd: Various pallets of SolFed weapons have dissapeared off their local warehouses.
+      Unrelated, theres now new offerings available in the black market!
+  - rscadd: Hunter slugs, double barrel and pump action shotguns are now available
+      in the goodie section of cargo.
+  - rscadd: Unrestricted variants for every SolFed evil reskin
+  - qol: Hunter slugs and trench tools now fit in explorer webbing.
+  - qol: Seccie ammo crates from cargo no longer contain their old shotgun ammo boxes,
+      having the advanced shotgun ammo boxes instead.
+  - balance: Lowered the price of the insul gloves crate to 1000 credits, you aren't
+      paying for an ethereal fourth pair of gloves anymore!
   MrBagHead:
   - rscadd: A Science/Medical Techfab Recipe for MonkeTech AutoTranslators for 5k
       Iron and 3k Glass
+  Shoddd:
+  - balance: comically large spoon's wound bonus is now 10
+  Tostah:
+  - balance: Commando operatives now provided syndicate modsuits and modules
   Wisemonster:
   - balance: Standardizes pathology on Heliostation, Icebox, and Theseus
   - rscadd: A warrant console has been added to the outside of box's security
@@ -148,3 +192,4 @@
   - bugfix: Slime vac can damage revenants when it's in ghost buster mode
   - bugfix: Slime vac no longer has infinite range when recycling monkeys
   - qol: Slime vac, Nozzle, and recycler now display their biomass on examine
+  - balance: TGMC armor vest protects from space temp
