@@ -1,0 +1,4 @@
+author: "Killermankey"
+delete-after: True
+changes:
+  - rscadd: "Adds a pickup truck (/obj/vehicle/ridden/kingschariot)"

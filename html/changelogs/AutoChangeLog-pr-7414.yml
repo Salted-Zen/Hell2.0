@@ -1,0 +1,9 @@
+author: "LettuceGuardian"
+delete-after: True
+changes:
+  - rscadd: "Various pallets of SolFed weapons have dissapeared off their local warehouses. Unrelated, theres now new offerings available in the black market!"
+  - rscadd: "Hunter slugs, double barrel and pump action shotguns are now available in the goodie section of cargo."
+  - rscadd: "Unrestricted variants for every SolFed evil reskin"
+  - qol: "Hunter slugs and trench tools now fit in explorer webbing."
+  - qol: "Seccie ammo crates from cargo no longer contain their old shotgun ammo boxes, having the advanced shotgun ammo boxes instead."
+  - balance: "Lowered the price of the insul gloves crate to 1000 credits, you aren't paying for an ethereal fourth pair of gloves anymore!"

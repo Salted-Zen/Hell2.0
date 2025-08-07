@@ -431,6 +431,7 @@
 		/obj/item/wirecutters,
 		/obj/item/wrench,
 		/obj/item/wormhole_jaunter,
+		/obj/item/trench_tool, //monkestation edit
 		/obj/item/cargo_teleporter, //monkestation edit
 		/obj/item/storage/box/kinetic, //monkestation edit
 		/obj/item/ammo_box/magazine/pksmgmag, //monkestation edit
@@ -453,6 +454,8 @@
 		/obj/item/ammo_box/govmining,
 		/obj/item/storage/box/kinetic/govmining,
 		/obj/item/ammo_casing/minerjdj
+		/obj/item/ammo_box/advanced/s12gauge/hunter, //monkestation edit
+		/obj/item/ammo_casing/shotgun/hunter, //monkestation edit
 	))
 
 
