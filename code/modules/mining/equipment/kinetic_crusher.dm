@@ -736,7 +736,7 @@
 		span_boldwarning("[user] plants their feet firmly to the ground and  winds up an attack!"),
 		span_boldwarning("You plant your feet firmly to the ground and wind up an attack!"),
 	)
-	if(do_after(user, 1 SECOND, src))
+	if(do_after(user, 1 SECOND, src) && (get_dist(user, target) <= 1))
 		armed = FALSE
 		update_appearance()
 		var/datum/status_effect/crusher_damage/C = target.has_status_effect(/datum/status_effect/crusher_damage)
@@ -845,7 +845,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	can_charge = TRUE //MAGICALLY ENHANCED THROWING KNIVES WOOOOO
 	max_charges = 5
-	recharge_rate = 3
+	recharge_rate = 5
 	ammo_type = /obj/item/ammo_casing/magic/knives
 	var/list/trophies = list() //yes these are new variables because this isnt a crusher subtype
 	var/charged = TRUE
@@ -877,9 +877,11 @@
 		return 0
 	charge_timer = 0
 	playsound(src, 'sound/items/unsheath.ogg', 100, TRUE) //aforementioned sound when a knife regenerates
-	charges++
-	if(charges == 1)
+	if(charges == 0) //make sure if the weapon gets emptied, a new round gets chambered
+		charges++
 		recharge_newshot()
+	while(charges < max_charges) //regenerate the entire magazine
+		charges++
 	return 1
 
 /obj/item/gun/magic/crusherknives/examine(mob/living/user)
@@ -971,13 +973,13 @@
 	var/turf/proj_turf = user.loc
 	if(!isturf(proj_turf))
 		return
-	var/obj/projectile/destabilizer/knife/destabilizer = new(proj_turf)
+	var/obj/projectile/destabilizer/longrange/destabilizer = new(proj_turf)
 	for(var/obj/item/crusher_trophy/attached_trophy as anything in trophies)
 		attached_trophy.on_projectile_fire(destabilizer, user)
 	destabilizer.preparePixelProjectile(target, user, modifiers)
 	destabilizer.firer = user
 	destabilizer.hammer_synced = src
-	playsound(user, 'sound/weapons/fwoosh.ogg', 100, TRUE)
+	playsound(user, 'sound/weapons/plasma_cutter.ogg', 100, TRUE)
 	destabilizer.fire()
 	if(charge_time > 0)
 		charged = FALSE
@@ -990,13 +992,8 @@
 		update_appearance()
 		playsound(src.loc, 'sound/weapons/etherealmiss.ogg' , 60, TRUE)
 
-/obj/projectile/destabilizer/knife //This does not get all its procs copy pasted because its actually a subtype of destabilizer
-	name = "destabilizing knife"
-	icon = 'icons/obj/mining.dmi'
-	icon_state = "crusherknife_thrown"
-	damage = 0
-	damage_type = BRUTE
-	armor_flag = BOMB
+/obj/projectile/destabilizer/longrange //This does not get all its procs copy pasted because its actually a subtype of destabilizer
+	name = "destabilizing shot"
 	range = 15 //its an actual knife you throw
 	log_override = TRUE
 	hammer_synced = /obj/item/gun/magic/crusherknives
@@ -1013,7 +1010,6 @@
 	var/obj/projectile/magic/knives/misery = loaded_projectile
 	misery.hammer_synced = hammer_synced
 	. = ..()
-
 
 /obj/projectile/magic/knives
 	name = "thrown proto-kinetic knife"
@@ -1035,6 +1031,7 @@
 
 //we have more copy pasted crusher code here because the damage from a projectile is different from a melee strike
 /obj/projectile/magic/knives/on_hit(atom/target, Firer, blocked = 0, pierce_hit)
+	. = ..()
 	if(isliving(target))
 		var/mob/living/L = target
 		var/datum/status_effect/crusher_mark/CM = L.has_status_effect(/datum/status_effect/crusher_mark)
