@@ -817,10 +817,11 @@
 	return ..()
 
 /obj/item/gun/magic/crusherknives //WHILE THIS ISNT EXACTLY CRUSHER, IT HAS A TON OF RE-USED CRUSHER CODE AND FUNCTIONS EXACTLY LIKE ONE, SO ITS GOING  HERE.
-	name = "set of proto kinetic knives" //DONT FORGET TO CLEAN THIS UP, MAKE IT A GLOVE WITH BLUESPACE TECH AND SPECIAL KNIVES
+	name = "set of proto kinetic knives"
 	desc = "With a touch of bluespace, the crusher has been made into a more practical form for throwing. \
 	This set of throwing knives allows you to utalize the features of a crusher while mainting more than a safe \
-	distance from whatever fauna stands between you and your ore."
+	distance from whatever fauna stands between you and your ore. Unfortunetly, while they are the perfect shape for throwing, the awkward grip \
+	and blade make it pretty much impossible to stab with... at least it can still utilize trophies."
 	fire_sound = 'sound/weapons/fwoosh.ogg'
 	pinless = TRUE
 	force = 10
@@ -849,8 +850,9 @@
 	var/list/trophies = list() //yes these are new variables because this isnt a crusher subtype
 	var/charged = TRUE
 	var/charge_time = 5
-	var/detonation_damage = 20 //on a melee attack your general damage is weaker but backstab bonus is better
-	var/backstab_bonus = 50 //80 total on a backstab
+	var/detonation_damage = 60 //these are the same as the thrown projectile so the description is correct on the damage.
+	var/backstab_bonus = 10
+	//so a quick note, you can technically land crusher melee stabs... however thats if point blanking it removed, from this... which i admittedly cant get removed from here so... im just redacting any mention of stabbing... sorry :(
 
 
 /obj/item/gun/magic/crusherknives/Initialize(mapload)
@@ -882,9 +884,8 @@
 
 /obj/item/gun/magic/crusherknives/examine(mob/living/user)
 	. = ..()
-	. += span_notice("Mark a large creature with a destabilizing force with right-click, then hit them in melee to do <b>[force + detonation_damage]</b> damage.")
+	. += span_notice("Mark a large creature with a destabilizing force with right-click, then hit them with a thrown knife to do <b>[force + detonation_damage]</b> damage.")
 	. += span_notice("Does <b>[force + detonation_damage + backstab_bonus]</b> damage if the target is backstabbed, instead of <b>[force + detonation_damage]</b>.")
-	. += span_notice("Thrown knives do less backstab damage but more non-backstab damage compared to stabbing!</b>.")
 	for(var/t in trophies)
 		var/obj/item/crusher_trophy/T = t
 		. += span_notice("It has \a [T] attached, which causes [T.effect_desc()].")
@@ -1029,7 +1030,7 @@
 	antimagic_flags = NONE
 	antimagic_charge_cost = 0
 	var/obj/item/gun/magic/crusherknives/hammer_synced
-	var/detonation_damage = 50 //on a throw your general damage is better but backstab bonus is worse
+	var/detonation_damage = 60
 	var/backstab_bonus = 10
 
 //we have more copy pasted crusher code here because the damage from a projectile is different from a melee strike
@@ -1076,7 +1077,7 @@
 	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
-	name = "proto-kinetic sickle" //REMOVE PLACEHOLDER STUFF DORK
+	name = "proto-kinetic sickle"
 	desc = "A simple yet effective design change was to curve the blade far more drastically, which \
 	has resulted in a crusher that is capable of digging deep through the natural armor of local fauna \
 	and cutting into veins and arteries, allowing the sickle design to cause extra damage through extreme blood loss."
