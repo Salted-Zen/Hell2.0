@@ -36,6 +36,7 @@
 	var/override_twohandedsprite = FALSE //ENABLE THIS FOR ALL NEW CRUSHER VARIENTS OR ELSE IT WILL BREAK
 	var/force_wielded = 20 // MONKESTATION ADDITION used by one handed crushers with wendigo claw
 	var/override_examine = FALSE //If set to true, removes the default examine text. For special crushers like sickle.
+	var/override_light_overlay_sprite = FALSE //because we do a lil shit coding, going to use this to remove light overlay from anything that doesnt have it so it doesnt use nosprite
 
 /obj/item/kinetic_crusher/Initialize(mapload)
 	. = ..()
@@ -185,7 +186,7 @@
 	. = ..()
 	if(!charged)
 		. += "[icon_state]_uncharged"
-	if(light_on)
+	if(light_on && !override_light_overlay_sprite)
 		. += "[icon_state]_lit"
 
 /obj/item/kinetic_crusher/compact //for admins
@@ -520,6 +521,7 @@
 	overrides_twohandrequired = TRUE
 	override_twohandedsprite = TRUE
 	force_wielded = 15
+	override_light_overlay_sprite = TRUE
 
 /obj/item/kinetic_crusher/machete/Initialize(mapload)
 	. = ..()
@@ -566,6 +568,7 @@
 	overrides_twohandrequired = FALSE
 	override_twohandedsprite = TRUE
 	force_wielded = 15
+	override_light_overlay_sprite = TRUE
 
 /obj/item/kinetic_crusher/spear/Initialize(mapload)
 	. = ..()
@@ -615,6 +618,7 @@
 	overrides_twohandrequired = FALSE
 	override_twohandedsprite = TRUE
 	force_wielded = 20
+	override_light_overlay_sprite = TRUE
 
 /obj/item/kinetic_crusher/hammer/Initialize(mapload)
 		. = ..()
@@ -668,6 +672,7 @@
 	overrides_twohandrequired = TRUE
 	override_twohandedsprite = TRUE
 	force_wielded = 5
+	override_light_overlay_sprite = TRUE
 
 /obj/item/kinetic_crusher/claw/Initialize(mapload)
 	. = ..()
@@ -706,6 +711,7 @@
 	override_twohandedsprite = TRUE
 	force_wielded = 5 //hit the crusher mark or suffer no damage
 	var/armed = FALSE //is the weapon armed?
+	override_light_overlay_sprite = TRUE
 
 /obj/item/kinetic_crusher/pilebunker/Initialize(mapload)
 	. = ..()
@@ -1093,6 +1099,7 @@
 	override_twohandedsprite = TRUE
 	force_wielded = 15
 	override_examine = TRUE //turned on because of the bleed part in
+	override_light_overlay_sprite = TRUE
 
 /obj/item/kinetic_crusher/sickle/examine(mob/living/user)
 	. = ..()
