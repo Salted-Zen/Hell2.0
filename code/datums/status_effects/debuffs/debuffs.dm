@@ -372,6 +372,18 @@
 	owner.underlays -= marked_underlay //if this is being called, we should have an owner at this point.
 	..()
 
+/datum/status_effect/crusher_mark/admin //admin version that marks any mob
+	id = "admin_crusher_mark"
+	duration = 3000
+
+/datum/status_effect/crusher_mark/admin/on_apply() //this one marks ANYONE :>
+	marked_underlay = mutable_appearance('icons/effects/effects.dmi', "shield2")
+	marked_underlay.pixel_x = -owner.pixel_x
+	marked_underlay.pixel_y = -owner.pixel_y
+	owner.underlays += marked_underlay
+	return TRUE
+
+
 /datum/status_effect/stacking/saw_bleed
 	id = "saw_bleed"
 	tick_interval = 6

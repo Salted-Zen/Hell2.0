@@ -1146,3 +1146,166 @@
 
 			SEND_SIGNAL(user, COMSIG_LIVING_CRUSHER_DETONATE, L, src, backstabbed)
 			L.apply_damage(combined_damage, BRUTE, blocked = def_check)
+
+
+//ADMIN ONLY PILE BUNKER THAT DOES WHAT YOU WOULD EXPECT OTHER THAN SHIT CODE
+
+/obj/item/kinetic_crusher/adminpilebunker
+	icon_state = "THEpilebunker_spike"
+	inhand_icon_state = "THEpilebunker_spike"
+	icon = 'icons/obj/mining 256x32.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/256x32_melee_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/256x32_melee_righthand.dmi'
+	name = "Somewhat Long Pilebunker"
+	desc = "Mining RND broke the fabric of reality, and uh... made... this slightly more penetrative pilebunker... that works on people... and doesnt need a destabilizing mark... \
+	Please return this to your nearest CC officer. how do they even manage this..."
+	force = 30
+	w_class = WEIGHT_CLASS_TINY
+	base_pixel_x = -126
+	pixel_x = -126
+	inhand_x_dimension = -194
+	armour_penetration = 1000
+	hitsound = 'sound/weapons/sonic_jackhammer.ogg'
+	attack_verb_continuous = list("absolutely obliterate")
+	attack_verb_simple = list("absolutely obliterates")
+	sharpness = SHARP_EDGED
+	charge_time = 1
+	detonation_damage = 10000
+	backstab_bonus = 10000
+	overrides_main = TRUE
+	override_twohandedsprite = TRUE
+	force_wielded = 30
+	var/armed = FALSE
+
+/obj/item/kinetic_crusher/adminpilebunker/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/update_icon_updates_onmob, ITEM_SLOT_HANDS)
+	AddComponent(/datum/component/two_handed, force_unwielded=0, force_wielded=force_wielded)
+
+/obj/item/kinetic_crusher/adminpilebunker/attack(mob/living/target, mob/living/carbon/user)
+	if(!armed)
+		to_chat(user, span_warning("The pilebunker is not armed, re-arm it! (Right click while unarmed!)"))
+		return COMPONENT_CANCEL_ATTACK_CHAIN
+	if(!HAS_TRAIT(src, TRAIT_WIELDED) && !overrides_twohandrequired)
+		to_chat(user, span_warning("[src] is too heavy to use with one hand! You fumble and drop everything."))
+		user.drop_all_held_items()
+		return COMPONENT_CANCEL_ATTACK_CHAIN
+	user.visible_message(
+		span_boldwarning("[user] plants their feet firmly to the ground and  winds up an attack!"),
+		span_boldwarning("You plant your feet firmly to the ground and wind up an attack!"),
+	)
+	armed = FALSE
+	update_appearance()
+	var/datum/status_effect/crusher_damage/C = target.has_status_effect(/datum/status_effect/crusher_damage)
+	if(!C)
+		C = target.apply_status_effect(/datum/status_effect/crusher_damage)
+	var/target_health = target.health
+	..()
+	for(var/t in trophies)
+		if(!QDELETED(target))
+			var/obj/item/crusher_trophy/T = t
+			T.on_melee_hit(target, user)
+	if(!QDELETED(C) && !QDELETED(target))
+		C.total_damage += target_health - target.health //we did some damage, but let's not assume how much we did
+
+/obj/item/kinetic_crusher/adminpilebunker/afterattack(atom/target, mob/living/user, proximity_flag, clickparams)
+	if(proximity_flag && isliving(target))
+		var/mob/living/L = target
+		var/datum/status_effect/crusher_mark/admin/CM = L.has_status_effect(/datum/status_effect/crusher_mark/admin)
+		if(!CM || CM.hammer_synced != src || !L.remove_status_effect(/datum/status_effect/crusher_mark/admin))
+			return
+		var/datum/status_effect/crusher_damage/C = L.has_status_effect(/datum/status_effect/crusher_damage)
+		if(!C)
+			C = L.apply_status_effect(/datum/status_effect/crusher_damage)
+		var/target_health = L.health
+		for(var/t in trophies)
+			var/obj/item/crusher_trophy/T = t
+			T.on_mark_detonation(target, user)
+		if(!QDELETED(L))
+			if(!QDELETED(C))
+				C.total_damage += target_health - L.health
+				playsound(user, 'sound/weapons/blastcannon.ogg', 100, TRUE)
+				shake_camera(user, 1, 100)
+				var/atom/throw_target = get_edge_target_turf(user, get_dir(target, user))
+				user.throw_at(throw_target, 100, 1000, gentle = FALSE)
+			new /obj/effect/temp_visual/explosion/fast(get_turf(L))
+			var/backstabbed = FALSE
+			var/combined_damage = detonation_damage
+			var/backstab_dir = get_dir(user, L)
+			var/def_check = L.getarmor(type = BOMB)
+			if((user.dir & backstab_dir) && (L.dir & backstab_dir))
+				backstabbed = TRUE
+				combined_damage += backstab_bonus
+			if(!QDELETED(C))
+				C.total_damage += combined_damage
+			SEND_SIGNAL(user, COMSIG_LIVING_CRUSHER_DETONATE, L, src, backstabbed)
+			L.apply_damage(combined_damage, BRUTE, blocked = def_check)
+
+/obj/item/kinetic_crusher/adminpilebunker/afterattack_secondary(atom/target, mob/living/user, clickparams)
+	if(!armed)
+		playsound(user, 'sound/mecha/hydraulic.ogg', 100, TRUE)
+		if(do_after(user, 0.1 SECONDS, src, IGNORE_USER_LOC_CHANGE | IGNORE_SLOWDOWNS))
+			armed = TRUE
+			update_appearance()
+			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+	if(!HAS_TRAIT(src, TRAIT_WIELDED) && !overrides_twohandrequired)
+		balloon_alert(user, "wield it first!")
+		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+	if(target == user)
+		balloon_alert(user, "can't aim at yourself!")
+		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+	fire_kinetic_blast(target, user, clickparams)
+	user.changeNext_move(CLICK_CD_MELEE)
+	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+/obj/item/kinetic_crusher/adminpilebunker/fire_kinetic_blast(atom/target, mob/living/user, clickparams)
+	if(!charged)
+		return
+	var/modifiers = params2list(clickparams)
+	var/turf/proj_turf = user.loc
+	if(!isturf(proj_turf))
+		return
+	var/obj/projectile/destabilizer/admin/destabilizer = new(proj_turf)
+	for(var/obj/item/crusher_trophy/attached_trophy as anything in trophies)
+		attached_trophy.on_projectile_fire(destabilizer, user)
+	destabilizer.preparePixelProjectile(target, user, modifiers)
+	destabilizer.firer = user
+	destabilizer.hammer_synced = src
+	playsound(user, 'sound/weapons/plasma_cutter.ogg', 100, TRUE)
+	destabilizer.fire()
+	if(charge_time > 0)
+		charged = FALSE
+		update_appearance()
+		addtimer(CALLBACK(src, PROC_REF(Recharge)), charge_time)
+
+/obj/item/kinetic_crusher/adminpilebunker/update_icon_state()
+	if(!armed)
+		icon_state = "THEpilebunker_spike"
+		inhand_icon_state = "THEpilebunker_spike"
+	else
+		icon_state = "THEpilebunker"
+		inhand_icon_state = "THEpilebunker"
+	return ..()
+
+//destablizing force that can mark people
+/obj/projectile/destabilizer/admin
+	name = "death force"
+	icon_state = "pulse1"
+	range = 50
+
+/obj/projectile/destabilizer/admin/on_hit(atom/target, blocked = 0, pierce_hit)
+	if(isliving(target))
+		var/mob/living/L = target
+		var/had_effect = (L.has_status_effect(/datum/status_effect/crusher_mark/admin)) //used as a boolean
+		var/datum/status_effect/crusher_mark/admin/CM = L.apply_status_effect(/datum/status_effect/crusher_mark/admin, hammer_synced)
+		if(hammer_synced)
+			for(var/t in hammer_synced.trophies)
+				var/obj/item/crusher_trophy/T = t
+				T.on_mark_application(target, CM, had_effect)
+	var/target_turf = get_turf(target)
+	if(ismineralturf(target_turf))
+		var/turf/closed/mineral/M = target_turf
+		new /obj/effect/temp_visual/kinetic_blast(M)
+		M.gets_drilled(firer)
+	..()
+
