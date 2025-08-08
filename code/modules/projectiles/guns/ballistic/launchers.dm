@@ -211,7 +211,9 @@
 	atom_storage.max_slots = 12
 	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
 	atom_storage.max_total_storage = 12
-	atom_storage.set_holdable(list())
+	atom_storage.set_holdable(list(
+		/obj/item/ammo_casing/a40mm/kinetic
+	))
 
 /obj/item/storage/box/kinetic/grenadelauncher/PopulateContents() //populate
 	for(var/i in 1 to 12)
