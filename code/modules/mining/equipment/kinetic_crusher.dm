@@ -35,6 +35,7 @@
 	var/overrides_twohandrequired = FALSE //Do we have the fumble on one handed attack attempt?
 	var/override_twohandedsprite = FALSE //ENABLE THIS FOR ALL NEW CRUSHER VARIENTS OR ELSE IT WILL BREAK
 	var/force_wielded = 20 // MONKESTATION ADDITION used by one handed crushers with wendigo claw
+	var/override_examine = FALSE //If set to true, removes the default examine text. For special crushers like sickle.
 
 /obj/item/kinetic_crusher/Initialize(mapload)
 	. = ..()
@@ -51,11 +52,12 @@
 
 /obj/item/kinetic_crusher/examine(mob/living/user)
 	. = ..()
-	. += span_notice("Mark a large creature with a destabilizing force with right-click, then hit them in melee to do <b>[force + detonation_damage]</b> damage.")
-	. += span_notice("Does <b>[force + detonation_damage + backstab_bonus]</b> damage if the target is backstabbed, instead of <b>[force + detonation_damage]</b>.")
-	for(var/t in trophies)
-		var/obj/item/crusher_trophy/T = t
-		. += span_notice("It has \a [T] attached, which causes [T.effect_desc()].")
+	if(!override_examine)
+		. += span_notice("Mark a large creature with a destabilizing force with right-click, then hit them in melee to do <b>[force + detonation_damage]</b> damage.")
+		. += span_notice("Does <b>[force + detonation_damage + backstab_bonus]</b> damage if the target is backstabbed, instead of <b>[force + detonation_damage]</b>.")
+		for(var/t in trophies)
+			var/obj/item/crusher_trophy/T = t
+			. += span_notice("It has \a [T] attached, which causes [T.effect_desc()].")
 
 /obj/item/kinetic_crusher/attackby(obj/item/I, mob/living/user)
 	if(I.tool_behaviour == TOOL_CROWBAR)
@@ -844,6 +846,7 @@
 	var/detonation_damage = 20 //on a melee attack your general damage is weaker but backstab bonus is better
 	var/backstab_bonus = 50 //80 total on a backstab
 
+
 /obj/item/gun/magic/crusherknives/Initialize(mapload)
 	. = ..()
 	var/obj/item/ammo_casing/magic/knives/pain = chambered
@@ -1089,6 +1092,7 @@
 	overrides_twohandrequired = TRUE
 	override_twohandedsprite = TRUE
 	force_wielded = 15
+	override_examine = TRUE //turned on because of the bleed part in
 
 /obj/item/kinetic_crusher/sickle/examine(mob/living/user)
 	. = ..()
