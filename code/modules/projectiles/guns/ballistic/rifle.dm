@@ -410,7 +410,7 @@
 #define CALIBER_MINER_950 ".950 JDJ Kinetic" //the ammo type (so it doesnt fit anywhere else)
 
 /obj/item/gun/ballistic/rifle/minerjdj //probably the singlehandedly most expensive weapon a miner can buy, and for good reason
-	name = ".950 JDJ Kinetic Rifle"
+	name = ".950 JDJ 'Thor' Kinetic Rifle"
 	desc = "Completely absurd, in both size and firepower. The people down in Mining Research were either overcompensating, \
 	or just having a damn good time, but we found this laying on a table surrounded by about six researchers, \
 	and the Mining Research Director, all passed out on the floor with beers and sodas. Fires an absolutely massive round that \
@@ -444,7 +444,7 @@
 
 /obj/item/ammo_casing/minerjdj
 	name = ".950 JDJ kinetic casing"
-	desc = "A monster of a round, weighing over half a pound and capable of generating over 50,000 Joules of force. You might assume almost nothing could survive a round like this... but..."
+	desc = "A monster of a round for the 'Thor' Rifle, weighing over half a pound and capable of generating over 50,000 Joules of force. You might assume almost nothing could survive a round like this... but..."
 	icon_state = ".950"
 	caliber = CALIBER_MINER_950
 	projectile_type = /obj/projectile/plasma/minerjdj
@@ -466,8 +466,8 @@
 	projectile_piercing = PASSMOB
 
 /obj/item/storage/box/kinetic/minerjdj/bigcase //box containing the actual gun for sale
-	name = ".950 JDJ Kinetic Rifle case"
-	desc = "A pretty redundant gun case that only contains the .950 JDJ Kinetic Rifle... contains no spare ammo, so make your one shot count or buy some more bullets."
+	name = ".950 JDJ Kinetic 'Thor' Rifle case"
+	desc = "A pretty redundant gun case that only contains the .950 JDJ Kinetic 'Thor' Rifle... contains no spare ammo, so make your one shot count or buy some more bullets."
 	icon = 'icons/obj/storage/case.dmi'
 	drop_sound = 'sound/items/handling/toolbox_drop.ogg'
 	pickup_sound = 'sound/items/handling/toolbox_pickup.ogg'
@@ -489,7 +489,7 @@
 
 /obj/item/storage/box/kinetic/minerjdj //box containing a single bullet, as to not anger the mining vendor with the bullets dynamic description
 	name = ".950 JDJ Kinetic bullet case"
-	desc = "A pretty redundant small gun case that only contains a single .950 JDJ Kinetic round... its more than enough honestly."
+	desc = "A pretty redundant small gun case that only contains a single .950 JDJ Kinetic round for the 'Thor' rifle... its more than enough honestly."
 	icon = 'icons/obj/storage/case.dmi'
 	drop_sound = 'sound/items/handling/toolbox_drop.ogg'
 	pickup_sound = 'sound/items/handling/toolbox_pickup.ogg'

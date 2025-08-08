@@ -297,7 +297,7 @@
 #define CALIBER_GOV_MINING ".45-70 Gov Kinetic" //the ammo type (so it doesnt fit anywhere else)
 
 /obj/item/gun/ballistic/revolver/govmining
-	name = "45-70 GOV Mining Revolver"
+	name = "45-70 GOV 'Duster' Revolver"
 	desc = "A .45-70 cartridge adapted to Proto Kinetic Acceleration technology has proven \
 	very effective for taking down the heavy hitting local fauna, making this a rather useful \
 	option to carry out into the wilds. Comes with a spin nanochip in the grip that grants \
@@ -344,7 +344,7 @@
 
 /obj/item/ammo_casing/govmining
 	name = ".45-70 Gov Kinetic Magnum Casing"
-	desc = "An absolute beast of a round that will probably only fit in a specially made BFR."
+	desc = "An absolute beast of a round that will probably only fit in the 'Duster' Revolver."
 	icon = 'icons/obj/weapons/guns/ammo.dmi'
 	icon_state = ".45-70"
 	caliber = CALIBER_GOV_MINING
@@ -352,7 +352,7 @@
 
 /obj/item/ammo_box/govmining
 	name = "speed loader (.45-70 Kinetic)"
-	desc = "A six round speedloader carrying an absolute beast of a round."
+	desc = "A six round speedloader carrying an absolute beast of a round for the 'Duster' Revolver."
 	icon_state = "4570loader"
 	w_class = WEIGHT_CLASS_TINY
 	ammo_type = /obj/item/ammo_casing/govmining
@@ -372,7 +372,7 @@
 
 /obj/item/storage/box/kinetic/govmining
 	name = "box of .45-70 Gov Kinetic rounds"
-	desc = "A box containing 36 individual .45-70 Gov Kinetic rounds. Good for loading your revolver or refilling your speedloaders. Fits in explorer webbing."
+	desc = "A box containing 36 individual .45-70 Gov Kinetic rounds. Good for loading your 'Duster' revolver or refilling your speedloaders. Fits in explorer webbing."
 	icon_state = "gov_box"
 	illustration = ""
 	foldable_result = /obj/item/stack/sheet/cardboard
@@ -391,8 +391,8 @@
 		new /obj/item/ammo_casing/govmining(src)
 
 /obj/item/storage/box/kinetic/govmining/bigcase
-	name = "Kinetic Revolver Case"
-	desc = "A case containing a kinetic revolver and three speedloaders."
+	name = "Kinetic 'Duster' Revolver Case"
+	desc = "A case containing a 'Duster' kinetic revolver and three speedloaders."
 	icon = 'icons/obj/storage/case.dmi'
 	drop_sound = 'sound/items/handling/toolbox_drop.ogg'
 	pickup_sound = 'sound/items/handling/toolbox_pickup.ogg'

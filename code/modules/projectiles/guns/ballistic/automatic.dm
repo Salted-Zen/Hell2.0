@@ -452,7 +452,7 @@
 //Not actually a PKA, but styled to be like one
 
 /obj/item/gun/ballistic/automatic/proto/pksmg
-	name = "proto-kinetic smg"
+	name = "proto-kinetic 'Rapier' smg"
 	desc = "Using partial ballistic technology and kinetic acceleration, the Mining Research department has managed to make the kinetic accelerator full auto. \
 	While the technology is promising, it is held back by certain factors, specifically limited ammo and no mod capacity, but that shouldn't be an issue with its performance."
 	icon = 'icons/obj/weapons/guns/ballistic.dmi'
@@ -478,7 +478,7 @@
 //Magazine for SMG and the box the mags come in
 /obj/item/ammo_box/magazine/pksmgmag
 	name = "proto-kinetic magazine"
-	desc = "A single magazine for the PKSMG."
+	desc = "A single magazine for the 'Rapier' SMG."
 	icon = 'icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "pksmgmag"
 	base_icon_state = "pksmgmag"
@@ -489,7 +489,7 @@
 
 /obj/item/storage/box/kinetic
 	name = "box of kinetic SMG magazines"
-	desc = "A box full of kinetic projectile magazines, specifically for the proto-kinetic SMG.\
+	desc = "A box full of kinetic projectile magazines, specifically for the 'Rapier' SMG.\
 	It is specially designed to only hold proto-kinetic magazines, and also fit inside of explorer webbing."
 	icon_state = "rubbershot_box"
 	illustration = "rubbershot_box"
@@ -509,8 +509,8 @@
 
 
 /obj/item/storage/box/pksmg //A case that the SMG comes in on purchase, containing three magazines
-	name = "PKSMG Case"
-	desc = "A case containing a PKSMG and three magazines. Designed for full auto but has limited ammo."
+	name = "'Rapier' SMG Case"
+	desc = "A case containing a 'Rapier' SMG and three magazines. Designed for full auto but has limited ammo."
 	icon_state = "miner_case"
 	icon = 'icons/obj/storage/case.dmi'
 	drop_sound = 'sound/items/handling/toolbox_drop.ogg'

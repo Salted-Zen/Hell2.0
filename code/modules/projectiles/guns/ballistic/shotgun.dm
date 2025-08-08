@@ -368,9 +368,9 @@
 #define MINER_SHOTGUN "kinetic shotgun"
 
 /obj/item/gun/ballistic/shotgun/doublebarrel/kinetic
-	name = "Kinetic Boomstick"
-	desc = "An advanced re-design of the old Proto-Kinetic Shotgun, this model utilizes the same partial ballistic and kinetic acceleration technology in the Proto-Kinetic SMG but to a much more devestating degree. \
-	While it still has the same problems as the PKSMG (No mod capacity, limited ammo) the PKShotgun features devestating firepower, and offers no compromise to any fauna that stands in its way. Rumor has it the \
+	name = "Kinetic 'Slayer' Boomstick"
+	desc = "An advanced re-design of the old Proto-Kinetic Shotgun, this model utilizes the same partial ballistic and kinetic acceleration technology in the Proto-Kinetic 'Rapier' SMG but to a much more devestating degree. \
+	While it still has the same problems as the PKSMG (No mod capacity, limited ammo) the 'Slayer' Shotgun features devestating firepower, and offers no compromise to any fauna that stands in its way. Rumor has it the \
 	Mining Research Director designed this to execute a dissident researcher at a pizza party. <b> Does NOT fit standard 12 gauge shells! Shells tend to get jammed when fired, so you must eject both shells before reloading.</b>"
 	icon_state = "protokshotgun"
 	inhand_icon_state = "protokshotgun"
@@ -534,8 +534,8 @@
 		new /obj/item/ammo_casing/shotgun/kinetic/rockbreaker(src)
 
 /obj/item/storage/box/kinetic/shotgun/bigcase //box
-	name = "Kinetic Shotgun Case"
-	desc = "A special and totally original gun case that contains a PKShotgun, eight shells of Rockbreaker, and four shells of Magnum Kinetic Buckshot. Beware, they dont fit back inside once taken out for some reason."
+	name = "Kinetic 'Slayer' Shotgun Case"
+	desc = "A special and totally original gun case that contains a 'Slayer' Shotgun, eight shells of Rockbreaker, and four shells of Magnum Kinetic Buckshot. Beware, they dont fit back inside once taken out for some reason."
 	icon = 'icons/obj/storage/case.dmi'
 	drop_sound = 'sound/items/handling/toolbox_drop.ogg'
 	pickup_sound = 'sound/items/handling/toolbox_pickup.ogg'
