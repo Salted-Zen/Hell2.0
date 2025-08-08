@@ -688,6 +688,8 @@
 	force = 0 //You can't hit stuff unless wielded
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = NONE
+	base_pixel_x = -5
+	pixel_x = -5
 	throwforce = 0
 	throw_speed = 0
 	armour_penetration = 100 //yknow what fuck you, its a pile bunker
@@ -981,7 +983,7 @@
 /obj/projectile/destabilizer/knife //This does not get all its procs copy pasted because its actually a subtype of destabilizer
 	name = "destabilizing knife"
 	icon = 'icons/obj/mining.dmi'
-	icon_state = "crusherknife"
+	icon_state = "crusherknife_thrown"
 	damage = 0
 	damage_type = BRUTE
 	armor_flag = BOMB
@@ -1006,7 +1008,7 @@
 /obj/projectile/magic/knives
 	name = "thrown proto-kinetic knife"
 	icon = 'icons/obj/mining.dmi'
-	icon_state = "crusherknife"
+	icon_state = "crusherknife_thrown"
 	damage = 10 //if people start abusing the FUCK out of this for station combat, drop it to five, thatll fucking teach them
 	damage_type = BRUTE
 	armour_penetration = 0

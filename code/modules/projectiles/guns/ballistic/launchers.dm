@@ -127,13 +127,15 @@
 	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
 	load_sound = 'sound/weapons/gun/sniper/mag_insert.ogg'
 	eject_sound = 'sound/weapons/gun/l6/l6_door.ogg'
-	worn_icon_state = "cshotgun"
+	worn_icon_state = "protoklauncher"
+	base_pixel_x = -5
+	pixel_x = -5
 	slot_flags = ITEM_SLOT_BACK
 	icon_state = "protoklauncher"
-	inhand_icon_state = "riotgun"
+	inhand_icon_state = "protoklauncher"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/kinetic
 	fire_sound = 'sound/weapons/gun/general/grenade_launch.ogg'
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	pin = /obj/item/firing_pin/wastes
 
 /obj/item/ammo_box/magazine/internal/grenadelauncher/kinetic

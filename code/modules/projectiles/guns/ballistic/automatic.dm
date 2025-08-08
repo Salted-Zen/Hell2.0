@@ -551,13 +551,15 @@
 	desc = "A fully automatic shotgun created using some spare polymer parts, procured from a undisclosed source. \
 	With some Proto Kinetic Acceleration tech mixed in, the 'Fenrir' becomes a lethal auto shotgun chambered in \
 	20. Gauge shells, for sweeping up any unwanted fauna from a hostile environment."
-	icon = 'icons/obj/weapons/guns/ballistic.dmi'
-	inhand_icon_state = "bulldog"
-	worn_icon_state = "cshotgunc"
+	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
+	inhand_icon_state = "protokshotgunauto"
+	worn_icon_state = "protokshotgunauto"
 	icon_state = "protokshotgunauto"
 	slot_flags = ITEM_SLOT_BACK
 	burst_size = 1
 	fire_delay = 0
+	base_pixel_x = -2
+	pixel_x = -2
 	actions_types = list()
 	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_HEAVY
