@@ -683,6 +683,7 @@
 	icon_state = "kineticlmg"
 	inhand_icon_state = "kineticlmg"
 	base_icon_state = "kineticlmg"
+	worn_icon_state = "folded_hmg"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	burst_size = 3

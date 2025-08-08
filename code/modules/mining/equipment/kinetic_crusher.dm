@@ -1161,6 +1161,8 @@
 	Please return this to your nearest CC officer. how do they even manage this..."
 	force = 30
 	w_class = WEIGHT_CLASS_TINY
+	worn_icon_state = ""
+	slot_flags = NONE
 	base_pixel_x = -126
 	pixel_x = -126
 	inhand_x_dimension = -194
