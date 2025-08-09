@@ -1157,7 +1157,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/256x32_melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/256x32_melee_righthand.dmi'
 	name = "Somewhat Long Pilebunker"
-	desc = "Mining RND broke the fabric of reality, and uh... made... this slightly more penetrative pilebunker... that works on people... and doesnt need a destabilizing mark... \
+	desc = "Mining RND broke the fabric of reality, and uh... made... this slightly more penetrative pilebunker... that works on people... \
 	Please return this to your nearest CC officer. how do they even manage this..."
 	force = 30
 	w_class = WEIGHT_CLASS_TINY
