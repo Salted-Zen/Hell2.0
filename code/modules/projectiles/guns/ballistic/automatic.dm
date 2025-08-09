@@ -561,7 +561,7 @@
 	base_pixel_x = -2
 	pixel_x = -2
 	actions_types = list()
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	mag_display = TRUE
 	empty_indicator = FALSE
