@@ -136,6 +136,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/kinetic
 	fire_sound = 'sound/weapons/gun/general/grenade_launch.ogg'
 	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
 	pin = /obj/item/firing_pin/wastes
 
 /obj/item/ammo_box/magazine/internal/grenadelauncher/kinetic
