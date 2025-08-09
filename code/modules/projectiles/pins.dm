@@ -396,7 +396,7 @@
 	fail_message = "Wastes check failed! - Try getting further from the station first."
 	pin_hot_swappable = FALSE
 	pin_removable = FALSE
-	var/list/wastes = list(
+	var/list/wastes = list( //locations you CAN use this
 		/area/icemoon/surface/outdoors,
 		/area/icemoon/underground/unexplored,
 		/area/icemoon/underground/explored,
@@ -408,12 +408,15 @@
 
 		/area/ruin,
 
-		/area/centcom/central_command_areas/evacuation, //END OF ROUND GRIEFING AVAILABLE NOW!!!
-		/area/centcom/central_command_areas/firing_range, //can be used in the centcom firing range if you get a waste pin there
+		/area/centcom/central_command_areas //can be used mostly anywhere on centcom, mainly for admins.
+	)
+	var/list/blacklist = list( //Locations you CANNOT use things with this pin specifically, for stuff like ghost role ruins.
+
+	//this is empty for now... however if some locations become a problem... consider this blacklist a threat...
 	)
 
 /obj/item/firing_pin/wastes/pin_auth(mob/living/user)
-	if(!istype(user))
+	if(!istype(user) || is_type_in_list(get_area(user), blacklist))
 		return FALSE
 	if (is_type_in_list(get_area(user), wastes)|| SSticker.current_state == GAME_STATE_FINISHED) //now unlocks after game is over. have fun
 		return TRUE
