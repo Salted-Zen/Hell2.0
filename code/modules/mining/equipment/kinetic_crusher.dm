@@ -1159,7 +1159,7 @@
 	name = "Somewhat Long Pilebunker"
 	desc = "Mining RND broke the fabric of reality, and uh... made... this slightly more penetrative pilebunker... that works on people... \
 	Please return this to your nearest CC officer. how do they even manage this..."
-	force = 30
+	force = 100
 	w_class = WEIGHT_CLASS_TINY
 	worn_icon_state = ""
 	slot_flags = NONE
@@ -1171,12 +1171,13 @@
 	attack_verb_continuous = list("absolutely obliterate")
 	attack_verb_simple = list("absolutely obliterates")
 	sharpness = SHARP_EDGED
-	charge_time = 1
+	charge_time = 0.01
 	detonation_damage = 10000
 	backstab_bonus = 10000
+	reach = 10
 	overrides_main = TRUE
 	override_twohandedsprite = TRUE
-	force_wielded = 30
+	force_wielded = 100
 	var/armed = FALSE
 
 /obj/item/kinetic_crusher/adminpilebunker/Initialize(mapload)
