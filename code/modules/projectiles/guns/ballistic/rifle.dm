@@ -418,6 +418,7 @@
 	icon_state = "fatmac"
 	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_HEAVY
+	slot_flags = ITEM_SLOT_BACK
 	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
 	inhand_icon_state = "fatmac"
 	worn_icon = 'icons/mob/clothing/back.dmi'
