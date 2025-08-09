@@ -144,20 +144,6 @@
 	caliber = CALIBER_40MM_KINETIC
 	max_ammo = 6
 
-//Once again the casings wont just fall out, you gotta eject them all
-/obj/item/ammo_box/magazine/internal/grenadelauncher/kinetic/give_round(obj/item/ammo_casing/R, replace_spent = 0)
-	if(!R || !(caliber ? (caliber == R.caliber) : (ammo_type == R.type)))
-		return FALSE
-
-	for(var/i in 1 to stored_ammo.len)
-		var/obj/item/ammo_casing/bullet = stored_ammo[i]
-		if(!bullet) // found a spent ammo
-			stored_ammo[i] = R
-			R.forceMove(src)
-			return TRUE
-
-	return FALSE
-
 /obj/item/ammo_casing/a40mm/kinetic
 	name = "40mm Kinetic Grenade"
 	desc = "A 40mm explosive grenade modified with Proto Kinetic technology."
