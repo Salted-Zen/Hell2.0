@@ -1228,7 +1228,6 @@
 			if(!QDELETED(C))
 				C.total_damage += target_health - L.health
 				playsound(user, 'sound/weapons/blastcannon.ogg', 100, TRUE)
-				shake_camera(user, 1, 100)
 				var/atom/throw_target = get_edge_target_turf(user, get_dir(target, user))
 				user.throw_at(throw_target, 100, 1000, gentle = FALSE)
 			new /obj/effect/temp_visual/explosion/fast(get_turf(L))
