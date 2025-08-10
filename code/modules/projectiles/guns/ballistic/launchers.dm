@@ -162,7 +162,10 @@
 	range = 25
 
 /obj/projectile/bullet/a40mm/kinetic/payload(atom/target)
-	explosion(target, devastation_range = 0, heavy_impact_range = 4, light_impact_range = 0, flame_range = 1, flash_range = 1, adminlog = FALSE, explosion_cause = src)
+	var/obj/item/grenade/shrapnel_maker = new /obj/item/grenade/kineticshrapnel(drop_location())
+	shrapnel_maker.detonate()
+	qdel(shrapnel_maker)
+	explosion(target, devastation_range = 0, heavy_impact_range = 0, light_impact_range = 4, flame_range = 0, flash_range = 1, adminlog = FALSE, explosion_cause = src)
 
 /obj/item/storage/box/kinetic/grenadelauncher/bigcase //box containing the  launcher and a spare box of grenades
 	name = "'Slab' grenade launcher case"
@@ -205,3 +208,39 @@
 /obj/item/storage/box/kinetic/grenadelauncher/PopulateContents() //populate
 	for(var/i in 1 to 12)
 		new /obj/item/ammo_casing/a40mm/kinetic (src)
+
+
+/obj/item/grenade/kineticshrapnel
+	name = "Kinetic fragmentation payload"
+	desc = "holy fucking shit you should NOT be seeing this please report it and then CRY ABOUT IT"
+	icon = 'monkestation/icons/obj/guns/40mm_grenade.dmi'
+	icon_state = "40mm_projectile"
+	shrapnel_type = /obj/projectile/bullet/shrapnel/kinetic
+	shrapnel_radius = 6
+	det_time = 0
+	display_timer = FALSE
+	ex_light = 0
+
+/obj/projectile/bullet/shrapnel/kinetic
+	name = "Kinetic Shrapnel Hunk"
+	range = 4
+	damage = 100
+	dismemberment = 15
+	ricochets_max = 0
+	ricochet_chance = 0
+	ricochet_incidence_leeway = 0
+	ricochet_decay_chance = 0
+
+/obj/projectile/bullet/shrapnel/kinetic/on_hit(atom/target, Firer, blocked = 0, pierce_hit) //its not meant to tear through walls like a plasma cutter, but will still at least bust down a wall if it hits one.
+	if(ismineralturf(target))
+		var/turf/closed/mineral/M = target
+		M.gets_drilled(firer, FALSE)
+	. = ..()
+
+/obj/item/grenade/kineticshrapnel/detonate(mob/living/lanced_by)
+
+	if(shrapnel_type && shrapnel_radius && !shrapnel_initialized)
+		shrapnel_initialized = TRUE
+		AddComponent(/datum/component/pellet_cloud, projectile_type = shrapnel_type, magnitude = shrapnel_radius)
+
+	SEND_SIGNAL(src, COMSIG_GRENADE_DETONATE, lanced_by)
