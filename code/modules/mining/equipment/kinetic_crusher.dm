@@ -1103,7 +1103,7 @@
 	. = ..()
 	. += span_notice("Mark a large creature with a destabilizing force with right-click, then hit them in melee to do <b>[force + detonation_damage]</b> damage.")
 	. += span_notice("Does <b>[force + detonation_damage + backstab_bonus]</b> damage if the target is backstabbed, instead of <b>[force + detonation_damage]</b>.")
-	. += span_notice("Does <b> 5 </b> stack of bleed on mark detonation, <b> 7 </b> for a backstab. upon SURPASSING <b> 10 </b> stacks of bleed, deals <b> 125 </b> extra damage.")
+	. += span_notice("Does <b> 5 </b> stack of bleed on mark detonation, <b> 6 </b> for a backstab. upon SURPASSING <b> 10 </b> stacks of bleed, deals <b> 125 </b> extra damage.")
 	for(var/t in trophies)
 		var/obj/item/crusher_trophy/T = t
 		. += span_notice("It has \a [T] attached, which causes [T.effect_desc()].")
@@ -1122,7 +1122,7 @@
 		if(existing_bleed)
 			existing_bleed.add_stacks(5)
 		else
-			L.apply_status_effect(/datum/status_effect/stacking/saw_bleed/sickle, 6)
+			L.apply_status_effect(/datum/status_effect/stacking/saw_bleed/sickle, 5)
 		for(var/t in trophies)
 			var/obj/item/crusher_trophy/T = t
 			T.on_mark_detonation(target, user)
@@ -1137,7 +1137,7 @@
 			if((user.dir & backstab_dir) && (L.dir & backstab_dir))
 				backstabbed = TRUE
 				combined_damage += backstab_bonus
-				L.apply_status_effect(/datum/status_effect/stacking/saw_bleed/sickle, 2)
+				L.apply_status_effect(/datum/status_effect/stacking/saw_bleed/sickle, 1)
 				playsound(user, 'sound/weapons/kenetic_accel.ogg', 100, TRUE) //Seriously who spelled it wrong
 
 			if(!QDELETED(C))
