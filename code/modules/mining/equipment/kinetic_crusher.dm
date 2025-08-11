@@ -1171,7 +1171,7 @@
 	inhand_x_dimension = -194
 	armour_penetration = 1000
 	hitsound = 'sound/weapons/sonic_jackhammer.ogg'
-	attack_verb_continuous = list("absolutely obliterate")
+	attack_verb_continuous = list("absolutely obliterates")
 	attack_verb_simple = list("absolutely obliterates")
 	sharpness = SHARP_EDGED
 	charge_time = 0.01
