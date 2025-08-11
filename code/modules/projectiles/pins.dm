@@ -412,7 +412,7 @@
 	var/list/blacklist = list( //Locations you CANNOT use things with this pin specifically, for stuff like ghost role ruins.
 		/area/ruin/space/has_grav/syndicate_depot, //syndicate locations have jammers or some shiii that makes you not able to use them there
 		/area/ruin/space/has_grav/listeningstation,
-		/area/ruin/space/has_grav/forgottenship,
+		/area/ruin/space/has_grav/syndicate_forgotten_ship,
 		/area/ruin/syndicate_lava_base,
 		/area/ruin/space/ancientstation/charlie, //charlies are safe because its still a NT station... just abandoned...
 
