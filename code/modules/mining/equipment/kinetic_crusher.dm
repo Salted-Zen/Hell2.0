@@ -1120,7 +1120,7 @@
 		var/target_health = L.health
 		var/datum/status_effect/stacking/saw_bleed/sickle/existing_bleed = L.has_status_effect(/datum/status_effect/stacking/saw_bleed/sickle)
 		if(existing_bleed)
-			existing_bleed.add_stacks()
+			existing_bleed.add_stacks(4)
 		else
 			L.apply_status_effect(/datum/status_effect/stacking/saw_bleed/sickle, 4)
 		for(var/t in trophies)
