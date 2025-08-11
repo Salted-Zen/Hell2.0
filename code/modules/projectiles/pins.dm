@@ -397,8 +397,7 @@
 	pin_hot_swappable = FALSE
 	pin_removable = FALSE
 	var/list/wastes = list( //locations you CAN use this
-		/area/icemoon/surface/outdoors,
-		/area/icemoon/underground/unexplored,
+		/area/icemoon/underground/unexplored, //surface outdoor of icemoon is not here because its the first floor, full of the most player activity.
 		/area/icemoon/underground/explored,
 
 		/area/lavaland/surface/outdoors,
@@ -411,8 +410,12 @@
 		/area/centcom/central_command_areas //can be used mostly anywhere on centcom, mainly for admins.
 	)
 	var/list/blacklist = list( //Locations you CANNOT use things with this pin specifically, for stuff like ghost role ruins.
+		/area/ruin/space/has_grav/syndicate_depot, //syndicate locations have jammers or some shiii that makes you not able to use them there
+		/area/ruin/space/has_grav/listeningstation,
+		/area/ruin/space/has_grav/forgottenship,
+		/area/ruin/syndicate_lava_base,
+		/area/ruin/space/ancientstation/charlie, //charlies are safe because its still a NT station... just abandoned...
 
-	//this is empty for now... however if some locations become a problem... consider this blacklist a threat...
 	)
 
 /obj/item/firing_pin/wastes/pin_auth(mob/living/user)
