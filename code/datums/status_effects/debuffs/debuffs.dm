@@ -399,7 +399,7 @@
 /datum/status_effect/stacking/saw_bleed/sickle //monke addition
 	id = "sickle_bleed"
 	tick_interval = 6
-	delay_before_decay = 30 //these take longer to decay
+	delay_before_decay = 100 //these take longer to decay
 	overlay_file = 'icons/effects/bleed.dmi'
 	underlay_file = 'icons/effects/bleed.dmi'
 	overlay_state = "bleed"

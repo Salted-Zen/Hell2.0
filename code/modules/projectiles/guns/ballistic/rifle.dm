@@ -454,7 +454,7 @@
 	name = ".950 JDJ Kinetic solid brass projectile"
 	desc = "you have somehow observed pure death, and it strikes fear that weaves deep within your psyche."
 	speed = 0.2
-	damage = 1000 //OK SO THIS CAN ONE SHOT A HANDFUL OF MEGA FAUNA AND CRIPPLE THE REST. FOR CONTEXT THE STRONGEST MEGA FAUNA (BUBBLE, COLLOSSUS) HAVE 2500 HP
+	damage = 2500 //(EXPERIMENTAL) it costs like fucking over 40k points just to buy the rifle, lets test making it just delete one boss of your choice (and the loot potentially :)
 	dismemberment = 100 //yeah no if you get hit by this its so over
 	damage_type = BRUTE
 	armor_flag = BULLET //not that it will save you...

@@ -712,7 +712,7 @@
 
 /obj/projectile/bullet/a762/kinetic
 	name = "kinetic 7.62 projectile"
-	damage = 25
+	damage = 15 //somehow does less damage than the LMG, uh... dont ask why?
 	icon_state = "gaussweak"
 
 /obj/projectile/bullet/a762/kinetic/on_hit(atom/target, Firer, blocked = 0, pierce_hit) //its not meant to tear through walls like a plasma cutter, but will still at least bust down a wall if it hits one.
