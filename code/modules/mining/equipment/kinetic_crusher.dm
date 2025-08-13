@@ -705,8 +705,8 @@
 	attack_verb_simple = list("impale", "stab", "destroy", "strike")
 	sharpness = SHARP_POINTY
 	charge_time = 75 //be patient, its alot of damage :)
-	detonation_damage = 495 //add the five for a perfect 500 damage
-	backstab_bonus = 500 //if you land a backstab, just fucking kill them. like actually just fucking die.
+	detonation_damage = 295 //add the five for a perfect 300 damage, enough to kill all basic enemies
+	backstab_bonus = 200 //if you land a backstab it does 500 instead
 	overrides_main = TRUE
 	override_twohandedsprite = TRUE
 	force_wielded = 5 //hit the crusher mark or suffer no damage
@@ -819,7 +819,7 @@
 /obj/item/gun/magic/crusherknives //WHILE THIS ISNT EXACTLY CRUSHER, IT HAS A TON OF RE-USED CRUSHER CODE AND FUNCTIONS EXACTLY LIKE ONE, SO ITS GOING  HERE.
 	name = "set of proto kinetic knives"
 	desc = "With a touch of bluespace, the crusher has been made into a more practical form for throwing. \
-	This set of throwing knives allows you to utalize the features of a crusher while mainting more than a safe \
+	This set of throwing knives allows you to utilize the features of a crusher while maintaining more than a safe \
 	distance from whatever fauna stands between you and your ore. Unfortunetly, while they are the perfect shape for throwing, the awkward grip \
 	and blade make it pretty much impossible to stab with... at least it can still utilize trophies."
 	fire_sound = 'sound/weapons/fwoosh.ogg'
