@@ -410,8 +410,9 @@
 		/area/centcom/central_command_areas //can be used mostly anywhere on centcom, mainly for admins.
 	)
 	var/list/blacklist = list( //Locations you CANNOT use things with this pin specifically, for stuff like ghost role ruins.
-		/area/space,
-		/area/ruin/space
+		/area/space, //no going outside
+		/area/ruin/space, //no explorers >:(
+		/area/ruin/powered/reebe // no stomping clock cults >:(
 	)
 
 /obj/item/firing_pin/wastes/pin_auth(mob/living/user)
