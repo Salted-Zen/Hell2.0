@@ -574,14 +574,14 @@
 //Magazine for SMG and the box the mags come in
 /obj/item/ammo_box/magazine/autoshotgun
 	name = "20 Gauge Shotgun Magazine"
-	desc = "A single magazine capable of holding 10 rounds of 20 gauge kinetic hydra shells."
+	desc = "A single magazine capable of holding 12 rounds of 20 gauge kinetic hydra shells."
 	icon = 'icons/obj/weapons/guns/ammo.dmi'
 	icon_state = "proto20gmag"
 	base_icon_state = "proto20gmag"
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	ammo_type = /obj/item/ammo_casing/shotgun/hydrakinetic
 	caliber = KINETIC_20G
-	max_ammo = 10
+	max_ammo = 12
 
 /obj/item/ammo_casing/shotgun/hydrakinetic
 	name = "Kinetic Hydra Shell"
@@ -590,7 +590,7 @@
 	icon = 'icons/obj/weapons/guns/ammo.dmi'
 	caliber = KINETIC_20G
 	pellets = 5
-	variance = 10 //very tight spread
+	variance = 7 //very tight spread
 	projectile_type = /obj/projectile/bullet/hydrakinetic
 
 /obj/projectile/bullet/hydrakinetic

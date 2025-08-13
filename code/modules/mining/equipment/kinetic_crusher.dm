@@ -1137,6 +1137,7 @@
 			if((user.dir & backstab_dir) && (L.dir & backstab_dir))
 				backstabbed = TRUE
 				combined_damage += backstab_bonus
+				existing_bleed = L.has_status_effect(/datum/status_effect/stacking/saw_bleed/sickle) //updates the var to check for existing bleed again (which should absolutely exist)
 				if(existing_bleed)
 					existing_bleed.add_stacks(2)
 				else
