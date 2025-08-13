@@ -393,7 +393,7 @@
 /obj/item/firing_pin/wastes
 	name = "Wastes firing pin"
 	desc = "This safety firing pin allows weapons to be fired only outside on the wastes of lavaland or icemoon."
-	fail_message = "Wastes check failed! - Try getting further from the station first."
+	fail_message = "Wastes check failed! - Make your way to lavaland or the Ice Caves!"
 	pin_hot_swappable = FALSE
 	pin_removable = FALSE
 	var/list/wastes = list( //locations you CAN use this
@@ -410,14 +410,8 @@
 		/area/centcom/central_command_areas //can be used mostly anywhere on centcom, mainly for admins.
 	)
 	var/list/blacklist = list( //Locations you CANNOT use things with this pin specifically, for stuff like ghost role ruins.
-		/area/ruin/space/has_grav/syndicate_depot, //syndicate locations have jammers or some shiii that makes you not able to use them there
-		/area/ruin/space/has_grav/listeningstation,
-		/area/ruin/space/has_grav/syndicate_forgotten_ship, //All three of these areas are in the same ruin, and have to be together on this blacklist
-		/area/ruin/space/has_grav/syndicate_forgotten_cargopod, //see above comment
-		/area/ruin/space/has_grav/powered/syndicate_forgotten_vault, //see above comment
-		/area/ruin/syndicate_lava_base,
-		/area/ruin/space/ancientstation/charlie, //charlies are safe because its still a NT station... just abandoned...
-
+		/area/space,
+		/area/ruin/space
 	)
 
 /obj/item/firing_pin/wastes/pin_auth(mob/living/user)
