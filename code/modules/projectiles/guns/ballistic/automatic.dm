@@ -597,8 +597,6 @@
 	name = "Kinetic Hydra Sabot"
 	icon_state = "bullet"
 	damage = 13
-	damage_type = BRUTE
-	armor_flag = BOMB
 
 /obj/projectile/bullet/hydrakinetic/on_hit(atom/target, Firer, blocked = 0, pierce_hit) //its not meant to tear through walls like a plasma cutter, but will still at least bust down a wall if it hits one.
 	if(ismineralturf(target))

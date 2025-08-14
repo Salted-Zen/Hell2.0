@@ -445,7 +445,6 @@
 	name = "magnum kinetic projectile"
 	icon_state = "cryoshot"
 	damage_type = BRUTE
-	armor_flag = BOMB
 	damage = 35  //totals 175 damage letting them reach the breakpoint for watcher HP so it one shots them
 	range = 7
 	dismemberment = 0
