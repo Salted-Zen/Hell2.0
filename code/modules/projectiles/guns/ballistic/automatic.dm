@@ -585,7 +585,7 @@
 
 /obj/item/ammo_casing/shotgun/hydrakinetic
 	name = "Kinetic Hydra Shell"
-	desc = "A 20 gauge shell loaded with five small sabot slugs, dubbed the Kinetic Hydra Shell! <b> Does NOT fit in any standard shotgun! </b>"
+	desc = "A 20 gauge shell loaded with five pellets, dubbed the Kinetic Hydra Shell! <b> Does NOT fit in any standard shotgun! </b>"
 	icon_state = "20gshell"
 	icon = 'icons/obj/weapons/guns/ammo.dmi'
 	caliber = KINETIC_20G
@@ -597,6 +597,7 @@
 	name = "Kinetic Hydra Sabot"
 	icon_state = "bullet"
 	damage = 13
+	armour_penetration = -15
 
 /obj/projectile/bullet/hydrakinetic/on_hit(atom/target, Firer, blocked = 0, pierce_hit) //its not meant to tear through walls like a plasma cutter, but will still at least bust down a wall if it hits one.
 	if(ismineralturf(target))
