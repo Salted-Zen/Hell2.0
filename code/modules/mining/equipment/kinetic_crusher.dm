@@ -611,7 +611,6 @@
 	light_outer_range = 5
 	light_on = FALSE
 	charged = TRUE
-	charge_time = 25
 	detonation_damage = 70
 	backstab_bonus = 0
 	overrides_main = TRUE
