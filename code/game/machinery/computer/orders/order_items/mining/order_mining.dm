@@ -80,7 +80,7 @@
 
 /datum/orderable_item/mining/crusher/pilebunker
 	item_path = /obj/item/kinetic_crusher/pilebunker
-	cost_per_order = 2000 //this thing outputs 500 damage, yeah its more expensive
+	cost_per_order = 2000 //this thing outputs 250 damage, yeah its more expensive
 
 /datum/orderable_item/mining/resonator
 	item_path = /obj/item/resonator

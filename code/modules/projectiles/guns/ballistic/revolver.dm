@@ -414,3 +414,26 @@
 		new /obj/item/ammo_box/govmining (src)
 		new /obj/item/ammo_box/govmining (src)
 		new /obj/item/ammo_box/govmining (src)
+
+/obj/item/storage/box/kinetic/govmining/smallcase
+	name = "Case of 'Duster' Speedloaders"
+	desc = "A case containing three spare speedloaders for the 'Duster' revolver"
+	icon = 'icons/obj/storage/case.dmi'
+	drop_sound = 'sound/items/handling/toolbox_drop.ogg'
+	pickup_sound = 'sound/items/handling/toolbox_pickup.ogg'
+	icon_state = "miner_case_small"
+	illustration = ""
+	foldable_result = /obj/item/stack/sheet/iron
+
+/obj/item/storage/box/kinetic/govmining/smallcase/Initialize(mapload) //initialize
+	. = ..()
+	atom_storage.max_slots = 3
+	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
+	atom_storage.max_total_storage = 3
+	atom_storage.set_holdable(list(/obj/item/ammo_box/govmining))
+
+/obj/item/storage/box/kinetic/govmining/smallcase/PopulateContents() //populate
+
+		new /obj/item/ammo_box/govmining (src)
+		new /obj/item/ammo_box/govmining (src)
+		new /obj/item/ammo_box/govmining (src)

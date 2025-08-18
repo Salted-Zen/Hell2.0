@@ -62,6 +62,10 @@
 	item_path = /obj/item/storage/box/kinetic/govmining
 	cost_per_order = 650
 
+/datum/orderable_item/accelerator/gun/miningrevolver/sparemags
+	item_path = /obj/item/storage/box/kinetic/govmining/smallcase
+	cost_per_order = 1500
+
 /datum/orderable_item/accelerator/gun/fenrir
 	item_path = /obj/item/storage/box/kinetic/autoshotgun/bigcase
 	cost_per_order = 2000
@@ -72,7 +76,7 @@
 
 /datum/orderable_item/accelerator/gun/fenrir/sparemags
 	item_path = /obj/item/storage/box/kinetic/autoshotgun/smallcase
-	cost_per_order = 1000
+	cost_per_order = 1500
 
 /datum/orderable_item/accelerator/gun/slab
 	item_path = /obj/item/storage/box/kinetic/grenadelauncher/bigcase
@@ -80,7 +84,7 @@
 
 /datum/orderable_item/accelerator/gun/slab/spareshells
 	item_path = /obj/item/storage/box/kinetic/grenadelauncher
-	cost_per_order = 1000
+	cost_per_order = 2000
 
 /datum/orderable_item/accelerator/gun/hellhound
 	item_path = /obj/item/storage/box/kinetic/kineticlmg/bigcase
@@ -88,7 +92,7 @@
 
 /datum/orderable_item/accelerator/gun/hellhound/spareshells
 	item_path = /obj/item/storage/box/kinetic/kineticlmg
-	cost_per_order = 1000
+	cost_per_order = 2500
 
 /datum/orderable_item/accelerator/gun/jdj
 	item_path = /obj/item/storage/box/kinetic/minerjdj/bigcase
