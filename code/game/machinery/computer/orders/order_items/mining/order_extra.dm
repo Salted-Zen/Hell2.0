@@ -25,6 +25,16 @@
 	item_path = /obj/item/survivalcapsule/luxuryelite
 	cost_per_order = 10000
 
+/datum/orderable_item/extra/silver_pickaxe //THIS AND THE DIAMOND PICKAXE ARE THE ONLY EXCEPTIONS, AND GO HERE BECAUSE THEY ARE NOOB BAIT BUT SHOULD STILL BE PURCHASEABLE
+	item_path = /obj/item/pickaxe/silver
+	desc = "A pickaxe plated with silver, incredibly outdated compared to more modern mining technology, but an option for those who really really want it."
+	cost_per_order = 1000
+
+/datum/orderable_item/extra/diamond_pickaxe
+	item_path = /obj/item/pickaxe/diamond
+	desc = "A pickaxe plated with diamond, much more effective than your standard pickaxe, but still incredibly outdated... Do you really want to buy this?"
+	cost_per_order = 2000
+
 /datum/orderable_item/extra/space_cash
 	item_path = /obj/item/stack/spacecash/c1000
 	desc = "A stack of space cash worth 1000 credits."
