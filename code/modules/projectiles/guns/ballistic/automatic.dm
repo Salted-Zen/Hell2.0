@@ -538,7 +538,7 @@
 /obj/projectile/kinetic/smg
 	name = "kinetic projectile"
 	damage = 10
-	range = 5
+	range = 7
 	icon_state = "bullet"
 	Skillbasedweapon = FALSE
 

@@ -96,11 +96,11 @@
 
 /datum/orderable_item/accelerator/gun/jdj
 	item_path = /obj/item/storage/box/kinetic/minerjdj/bigcase
-	cost_per_order = 153847 //really weird number however its specifically set to this to make shuttle buy a clean 100k points. This thing should demolish your wallet as violently as your enemies
+	cost_per_order = 76923 //really weird number however its specifically set to this to make shuttle buy a clean 50k points. This thing should demolish your wallet as violently as your enemies
 
 /datum/orderable_item/accelerator/gun/jdj/spareshells
 	item_path = /obj/item/storage/box/kinetic/minerjdj
-	cost_per_order = 115385 //same reason as above, this puts it at 75k for a shuttle buy
+	cost_per_order = 53846 //same reason as above, this puts it at 75k for a shuttle buy
 
 /datum/orderable_item/accelerator/range
 	item_path = /obj/item/borg/upgrade/modkit/range
