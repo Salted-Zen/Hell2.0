@@ -1069,10 +1069,8 @@
 	icon_state = "crushersickle"
 	inhand_icon_state = "crushersickle"
 	worn_icon_state = "crushersickle"
-	lefthand_file = 'icons/mob/inhands/64x64_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/64x64_righthand.dmi'
-	inhand_x_dimension = 64
-	inhand_y_dimension = 64
+	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	name = "proto-kinetic sickle"
 	desc = "A simple yet effective design change was to curve the blade far more drastically, which \
 	has resulted in a crusher that is capable of digging deep through the natural armor of local fauna \

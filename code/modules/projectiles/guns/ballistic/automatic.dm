@@ -679,10 +679,11 @@
 	is a LMG chambered in kinetic 7.62 with a incredibly high fire rate, for when you need a beast \
 	to kill a beast. Has a fixed unremovable 100 round magazine with a special loading port on the outside, allowing you to \
 	top off and reload using stripper clips."
+	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
 	icon_state = "kineticlmg"
 	inhand_icon_state = "kineticlmg"
 	base_icon_state = "kineticlmg"
-	worn_icon_state = "folded_hmg"
+	worn_icon_state = "kineticlmg"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	burst_size = 3
