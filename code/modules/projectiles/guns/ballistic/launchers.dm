@@ -216,7 +216,7 @@
 	icon = 'monkestation/icons/obj/guns/40mm_grenade.dmi'
 	icon_state = "40mm_projectile"
 	shrapnel_type = /obj/projectile/bullet/shrapnel/kinetic
-	shrapnel_radius = 3
+	shrapnel_radius = 2
 	det_time = 0
 	display_timer = FALSE
 	ex_light = 0
@@ -225,7 +225,8 @@
 	name = "Kinetic Shrapnel Hunk"
 	range = 5
 	damage = 75
-	dismemberment = 15
+	weak_against_armour = TRUE
+	dismemberment = 0
 	ricochets_max = 0
 	ricochet_chance = 0
 	ricochet_incidence_leeway = 0
