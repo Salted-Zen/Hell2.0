@@ -438,6 +438,7 @@
 	var/cell_hit_cost = 1000
 	var/can_remove_cell = TRUE
 	var/convertible = TRUE //if it can be converted with a conversion kit
+	var/passive_cell_drain = TRUE //if the cell should passively drain charge if left on
 
 /datum/armor/baton_security
 	bomb = 50
@@ -562,9 +563,10 @@
 /obj/item/melee/baton/security/attack_self(mob/user)
 	if(cell?.charge >= cell_hit_cost)
 		active = !active
-		START_PROCESSING(SSobj, src)
 		balloon_alert(user, "turned [active ? "on" : "off"]")
 		playsound(src, SFX_SPARKS, 75, TRUE, -1)
+		if(passive_cell_drain)
+			START_PROCESSING(SSobj, src)
 	else
 		active = FALSE
 		if(!cell)
@@ -798,6 +800,7 @@
 	slot_flags = null
 	throw_stun_chance = 50 //I think it'd be funny
 	can_upgrade = FALSE
+	passive_cell_drain = FALSE //this is a EVIL stick
 
 /obj/item/melee/baton/security/cattleprod/telecrystalprod/clumsy_check(mob/living/carbon/human/user)
 	. = ..()
