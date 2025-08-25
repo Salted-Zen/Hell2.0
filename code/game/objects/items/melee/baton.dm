@@ -793,7 +793,7 @@
 
 /obj/item/melee/baton/security/cattleprod/telecrystalprod
 	name = "snatcherprod"
-	desc = "A prod with a telecrystal on the end. It sparks with a desire for theft and subversion."
+	desc = "A prod with a telecrystal on the end. It sparks with a desire for theft and subversion. The telecrystal doesn't drain charge passively either!"
 	w_class = WEIGHT_CLASS_NORMAL
 	icon_state = "telecrystalprod"
 	inhand_icon_state = "telecrystalprod"
