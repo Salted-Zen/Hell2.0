@@ -462,10 +462,9 @@
 	if(!active || !cell)
 		return PROCESS_KILL
 
-	if(!cell.use(cell.maxcharge * 0.01) * seconds_per_tick || cell.charge < cell_hit_cost) //reduces the charge by 1% no matter what the max is, so botany super cells cant be used to bypass your baton drain.
+	if(!cell.use((cell.maxcharge * 0.01) * seconds_per_tick) || cell.charge < cell_hit_cost) //reduces the charge by 1% no matter what the max is, so botany super cells cant be used to bypass your baton drain.
 		visible_message(span_warning("The baton fizzles and slowly dims as the charge runs out!"))
 		src.attack_self()
-		return
 
 /obj/item/melee/baton/security/suicide_act(mob/living/user)
 	if(cell?.charge && active)
