@@ -458,13 +458,10 @@
 	return cell
 
 /obj/item/melee/baton/security/process(seconds_per_tick, mob/living/user)
-	if(!active)
-		return
+	if(!active || !cell)
+		return PROCESS_KILL
 
-	if(!cell)
-		return
-
-	if(!cell.use(cell.maxcharge * 0.01) || cell.charge < cell_hit_cost) //reduces the charge by 1% no matter what the max is, so botany super cells cant be used to bypass your baton drain.
+	if(!cell.use(cell.maxcharge * 0.01) * seconds_per_tick || cell.charge < cell_hit_cost) //reduces the charge by 1% no matter what the max is, so botany super cells cant be used to bypass your baton drain.
 		visible_message(span_warning("The baton fizzles and slowly dims as the charge runs out!"))
 		src.attack_self()
 		return
@@ -482,6 +479,7 @@
 	if(cell)
 		QDEL_NULL(cell)
 	UnregisterSignal(src, COMSIG_ATOM_ATTACKBY)
+	STOP_PROCESSING(SSobj, src)
 	return ..()
 
 /obj/item/melee/baton/security/proc/convert(datum/source, obj/item/item, mob/user)
