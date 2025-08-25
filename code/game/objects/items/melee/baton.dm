@@ -563,7 +563,7 @@
 
 /obj/item/melee/baton/security/attack_self(mob/user)
 	if(cell?.charge >= cell_hit_cost)
-		if(do_after(user, 0.5 SECOND, src)) //turning it on / off is not so easy now
+		if(do_after(user, 0.5 SECOND, src, IGNORE_USER_LOC_CHANGE | IGNORE_SLOWDOWNS)) //turning it on / off is not so easy now
 			active = !active
 			START_PROCESSING(SSobj, src)
 			balloon_alert(user, "turned [active ? "on" : "off"]")
